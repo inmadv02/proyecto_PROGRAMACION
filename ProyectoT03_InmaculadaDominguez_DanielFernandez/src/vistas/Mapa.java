@@ -8,39 +8,115 @@ public class Mapa {
 		
 		//Primer intento
 		for(int i = 0; i < 10; i++) {
-			System.out.print("* ");
+			System.out.print("**");
 		}
 		System.out.println();
 		
 		for(int i = 0; i < 8; i++) {
 			System.out.print("* ");
-			for(int j = 0; j < 16; j++) {
+			for(int j = 0; j < 14; j++) {
 				System.out.print(" ");
 				
-//				if(i == 1 && j == 1) {
-//					System.out.print("*");
-//				}
-//				
-//				if(i == 2 && j == 1) {
-//					System.out.print("*");
-//				}
-//				
-//				if(i == 3 && j == 1) {
-//				System.out.print("*");
-//				
-//				}
+				if(i == 0 && j == 1) {
+					System.out.print("    ");
+				}
+				
+				//Primera calle del supermercado
+				
+				if(i == 1 && j == 1) {
+					System.out.print(" *");
+				}
+				
+				if(i == 2 && j == 1) {
+					System.out.print(" *");
+				}
+				
+				if(i == 3 && j == 1) {
+				System.out.print(" *");
+				
+				}
+				
+				if(i == 4 && j == 1) {
+					System.out.print(" *");
+				}
+				
+				if(i == 5 && j == 1) {
+					System.out.print(" *");
+				}
+				
+				//Segunda calle del super
+				
+				if(i == 1 && j == 5) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 2 && j == 5) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 3 && j == 5) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 4 && j == 5) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 5 && j == 5) {
+					System.out.print("*");
+				
+				}
+				
+				//Tercera calle del super
+				
+				if(i == 1 && j == 9) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 2 && j == 9) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 3 && j == 9) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 4 && j == 9) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 5 && j == 9) {
+					System.out.print("*");
+				
+				}
+				
+				if(i == 6 && j == 10) {
+					System.out.print("    ");
+				}
+				
+				if(i == 7 && j == 10) {
+					System.out.print("    ");
+				}
 			
 			}
 			System.out.println("*");
 			
-			if(i == 2) {
-				System.out.print("*  ");
-			}
+//			if(i == 2) {
+//				System.out.print("*  ");
+//			}
 		}
 		
 	
 		for(int i = 0; i < 10; i++) {
-			System.out.print("* ");
+			System.out.print("**");
 		}
 		
 		//Segundo intento
