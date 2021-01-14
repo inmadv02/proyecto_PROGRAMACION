@@ -1,7 +1,7 @@
 package vistas;
 
 public class Mapa {
-<<<<<<< HEAD
+
 	
 	public static void imprimirMapa () {
 		
@@ -79,7 +79,6 @@ public class Mapa {
 //		
 //		
   }
-=======
->>>>>>> d9dc1f3ebaf56ec92ef4658c631088ff2e46faca
+
 
 }
