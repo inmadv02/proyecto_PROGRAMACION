@@ -1,6 +1,7 @@
 package principal;
 
 import vistas.Mapa;
+import controller.ControllerPersonaje;
 
 public class Ppal {
 
@@ -9,6 +10,9 @@ public class Ppal {
 		
 		Mapa.imprimirMapa();
 
+		
+		
+		System.out.println(ControllerPersonaje.generarFuerzaEnemigos());
 	}
 
 }
