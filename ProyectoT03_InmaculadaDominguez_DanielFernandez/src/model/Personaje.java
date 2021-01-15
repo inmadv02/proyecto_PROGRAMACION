@@ -3,11 +3,11 @@ package model;
 public class Personaje {
 	
 	private String nombre;
-	private double vida;
-	private double fuerza;
+	private int vida;
+	private int fuerza;
 	//private double energia;
 	
-	public Personaje(String nombre, double vida, double fuerza) {
+	public Personaje(String nombre, int vida, int fuerza) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
@@ -22,25 +22,30 @@ public class Personaje {
 		this.nombre = nombre;
 	}
 
-	public double getVida() {
+	public int getVida() {
 		return vida;
 	}
 
-	public void setVida(double vida) {
+	public void setVida(int vida) {
 		this.vida = vida;
 	}
 
-	public double getFuerza() {
+	public int getFuerza() {
 		return fuerza;
 	}
 
-	public void setFuerza(double fuerza) {
+	public void setFuerza(int fuerza) {
 		this.fuerza = fuerza;
 	}
 
+	@Override
 	public String toString() {
 		return "Personaje [nombre=" + nombre + ", vida=" + vida + ", fuerza=" + fuerza + "]";
 	}
+	
+	
+	
+	
 	
 	
 	
