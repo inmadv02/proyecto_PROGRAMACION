@@ -15,6 +15,7 @@ public class Historia {
 		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la población, así que, "
 				+ "¿por qué no sales afuera para ver qué más puedes conseguir?");
 		System.out.println();
+	
 		
 	}
 	
@@ -22,6 +23,14 @@ public class Historia {
 		
 		System.out.println();
 		System.out.println("______________________________________________________________________________________");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -96,7 +105,12 @@ public class Historia {
 		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
 		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
 		System.out.println("\t \t \t     |___________________________|");
-		
+		System.out.println();
+		System.out.println("\t \t \t     ·");
+		System.out.println("\t \t \t     ·");
+		System.out.println("\t \t \t     ·");
+		System.out.println("\t \t \t     ·");
+		System.out.println("\t \t \t     ·");
 		
 	}
 
