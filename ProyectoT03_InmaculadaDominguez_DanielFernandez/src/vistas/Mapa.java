@@ -13,7 +13,7 @@ public class Mapa {
 		System.out.println();
 		
 		for(int i = 0; i < 8; i++) {
-			System.out.print("* ");
+			System.out.print("*");
 			for(int j = 0; j < 11; j++) {
 				System.out.print(" ");
 				
@@ -24,24 +24,24 @@ public class Mapa {
 				//Primera calle del supermercado
 				
 				if(i == 1 && j == 1) {
-					System.out.print("||");
+					System.out.print(" ||");
 				}
 				
 				if(i == 2 && j == 1) {
-					System.out.print("||");
+					System.out.print(" ||");
 				}
 				
 				if(i == 3 && j == 1) {
-				System.out.print("||");
+				System.out.print(" ||");
 				
 				}
 				
 				if(i == 4 && j == 1) {
-					System.out.print("||");
+					System.out.print(" ||");
 				}
 				
 				if(i == 5 && j == 1) {
-					System.out.print("||");
+					System.out.print(" ||");
 				}
 				
 				//Segunda calle del super
@@ -107,7 +107,7 @@ public class Mapa {
 				}
 			
 			}
-			System.out.println("*");
+			System.out.println("* ");
 			
 //			if(i == 2) {
 //				System.out.print("*  ");

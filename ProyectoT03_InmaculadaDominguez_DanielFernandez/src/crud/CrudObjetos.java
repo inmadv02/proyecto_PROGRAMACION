@@ -1,6 +1,6 @@
 package crud;
 
-//import controller.ControllerObjeto;
+import controller.ControllerObjeto;
 
 import model.Objetos;
 
@@ -10,7 +10,7 @@ public class CrudObjetos {
 		
 		Objetos o;
 		
-		//o = new Objetos(ControllerObjeto.GenerarBonus(),ControllerObjeto.GenerarBonus());
+		o = new Objetos(ControllerObjeto.GenerarBonus(),ControllerObjeto.GenerarBonus());
 	}
 	
 	
