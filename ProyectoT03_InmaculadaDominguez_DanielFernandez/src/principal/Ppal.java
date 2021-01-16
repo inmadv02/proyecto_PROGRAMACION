@@ -1,5 +1,6 @@
 package principal;
 
+import vistas.Historia;
 import vistas.Mapa;
 
 import vistas.Titulo;
@@ -17,9 +18,13 @@ public class Ppal {
 		
 		Mapa.imprimirMapa();
 
+		Historia.imprimirIntro();
 		
+		Historia.imprimirPantallaCarga();
 		
-		System.out.println(ControllerPersonaje.generarFuerzaEnemigos());
+		Historia.imprimirMision();
+		
+		//System.out.println(ControllerPersonaje.generarFuerzaEnemigos());
 	}
 
 }

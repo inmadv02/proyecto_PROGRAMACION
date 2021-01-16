@@ -12,6 +12,9 @@ public class Titulo {
 				+ "\\_____\\ \\_/____/(____  /__|  (____  /___|  /__| |__|___|  /\\___  >\r\n"
 				+ "       \\__>          \\/           \\/     \\/             \\/     \\/ \r\n"
 				+ "");
+		
+	   System.out.println();
+	   System.out.println();
 	}
 
 }
