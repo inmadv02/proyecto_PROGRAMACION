@@ -106,11 +106,11 @@ public class Historia {
 		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
 		System.out.println("\t \t \t     |___________________________|");
 		System.out.println();
-		System.out.println("\t \t \t     ·");
-		System.out.println("\t \t \t     ·");
-		System.out.println("\t \t \t     ·");
-		System.out.println("\t \t \t     ·");
-		System.out.println("\t \t \t     ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
 		
 	}
 

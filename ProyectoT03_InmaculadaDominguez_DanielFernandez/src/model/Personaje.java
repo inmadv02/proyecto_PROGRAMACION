@@ -7,8 +7,7 @@ public class Personaje {
 	private int fuerza;
 	//private double energia;
 	
-	public Personaje(String nombre, int vida, int fuerza) {
-		super();
+	public Personaje (String nombre, int vida, int fuerza) {
 		this.nombre = nombre;
 		this.vida = vida;
 		this.fuerza = fuerza;
