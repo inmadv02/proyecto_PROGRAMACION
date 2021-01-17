@@ -4,6 +4,8 @@ public class Historia {
 	
 	public static void imprimirIntro () {
 		
+		System.out.println("\n######################################################################################################");
+		
 		System.out.println("\n \nBienvenido al año 2020, un año donde la humanidad se ha visto\n"
 				+ "amenazada por un virus nuevo y desconocido: el Coronavirus.");
 		System.out.println("Este patógeno no solo afecta a la salud de las personas, sino que\n"
@@ -22,7 +24,7 @@ public class Historia {
 	public static void imprimirPantallaCarga () {
 		
 		System.out.println();
-		System.out.println("______________________________________________________________________________________");
+		System.out.println("_________________________________________________________________________________________________________");
 		System.out.println();
 		System.out.println();
 		System.out.println();

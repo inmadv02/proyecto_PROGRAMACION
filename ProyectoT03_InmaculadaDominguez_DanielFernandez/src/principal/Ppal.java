@@ -14,19 +14,20 @@ public class Ppal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op, cero = 0;
+		int op, op2, cero = 0;
 		
 		
 		Titulo.imprimirTitulo();
 		
 		do {
 		
-		System.out.println("\t \t \t  _________________________");
-		System.out.println("\t \t \t | \t    \t    \t   |");
-		System.out.println("\t \t \t | [1] Nueva partida       |");
-		System.out.println("\t \t \t | [2] Cómo jugar          |");
-		System.out.println("\t \t \t | [0] Salir del juego     |");
-		System.out.println("\t \t \t |_________________________|");
+		System.out.println("\t \t \t       _________________________");
+		System.out.println("\t \t \t      |\t\t\t\t|");
+		System.out.println("\t \t \t      | [1] Nueva partida       |");
+		System.out.println("\t \t \t      | [2] Cómo jugar          |");
+		System.out.println("\t \t \t      | [0] Salir del juego     |");
+		System.out.println("\t \t \t      |_________________________|");
+		System.out.println();
 		op = Leer.datoInt();
 		
 		switch (op) {
@@ -35,11 +36,24 @@ public class Ppal {
 			
 			Historia.imprimirIntro();
 			
-			Historia.imprimirPantallaCarga();
+			System.out.println("Pulse 1 para empezar.");
 			
-			Historia.imprimirMision();
-		
-			//Mapa.imprimirMapa();
+			op2 = Leer.datoInt();
+			
+			switch (op2) {
+			
+			case 1:
+				
+				Historia.imprimirPantallaCarga();
+				Historia.imprimirMision();
+				//Mapa.imprimirMapa();
+			
+				break;
+				
+			default:
+				
+				System.out.println("Opción incorrecta. Prueba de nuevo.");
+			}
 			
 			break;
 			
