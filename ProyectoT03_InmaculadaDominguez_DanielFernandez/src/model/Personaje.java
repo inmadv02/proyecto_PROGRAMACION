@@ -17,8 +17,8 @@ public class Personaje {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre(String nombreJ) {
+		this.nombre = nombreJ;
 	}
 
 	public int getVida() {
@@ -37,9 +37,13 @@ public class Personaje {
 		this.fuerza = fuerza;
 	}
 
-	@Override
 	public String toString() {
-		return "Personaje [nombre=" + nombre + ", vida=" + vida + ", fuerza=" + fuerza + "]";
+		return "\t \t \t       _________________________\r\n"
+				+ "\t \t \t      |\t\t\t\t|\r\n"
+				+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
+				+ "\t \t \t      | Vida: " + vida + "\t \t|\r\n"
+				+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
+				+ "\t \t \t      |_________________________|";
 	}
 	
 	

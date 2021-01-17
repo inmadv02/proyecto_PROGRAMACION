@@ -2,10 +2,9 @@ package principal;
 
 import vistas.Historia;
 import vistas.Mapa;
-
 import vistas.Titulo;
-
 import controller.ControllerPersonaje;
+import model.Personaje;
 import utilidades.Leer;
 
 
@@ -15,12 +14,16 @@ public class Ppal {
 		// TODO Auto-generated method stub
 		
 		int op, op2, cero = 0;
+		String nombreJ;
+		Personaje p;
+		int vida, fuerza;
 		
 		
 		Titulo.imprimirTitulo();
 		
 		do {
 		
+		System.out.println();	
 		System.out.println("\t \t \t       _________________________");
 		System.out.println("\t \t \t      |\t\t\t\t|");
 		System.out.println("\t \t \t      | [1] Nueva partida       |");
@@ -36,7 +39,15 @@ public class Ppal {
 			
 			Historia.imprimirIntro();
 			
-			System.out.println("Pulse 1 para empezar.");
+			System.out.println("Di tu nombre. Debe contener solo una letra");
+			nombreJ = Leer.dato();
+			
+			vida = ControllerPersonaje.generarVidaPersonaje();
+			fuerza = ControllerPersonaje.generarFuerzaPersonaje();
+			
+			p = new Personaje (nombreJ, vida, fuerza);
+			
+			System.out.println("Pulsa 1 para empezar.");
 			
 			op2 = Leer.datoInt();
 			
@@ -46,7 +57,8 @@ public class Ppal {
 				
 				Historia.imprimirPantallaCarga();
 				Historia.imprimirMision();
-				//Mapa.imprimirMapa();
+				System.out.println(p);
+				Mapa.imprimirMapa();
 			
 				break;
 				
