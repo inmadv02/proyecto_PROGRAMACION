@@ -6,7 +6,7 @@ import vistas.Titulo;
 import controller.ControllerPersonaje;
 import model.Personaje;
 import utilidades.Leer;
-
+import datos.DatosMapa;
 
 public class Ppal {
 
@@ -17,6 +17,7 @@ public class Ppal {
 		String nombreJ;
 		Personaje p;
 		int vida, fuerza;
+		DatosMapa m = new DatosMapa();
 		
 		
 		Titulo.imprimirTitulo();
@@ -58,7 +59,7 @@ public class Ppal {
 				Historia.imprimirPantallaCarga();
 				Historia.imprimirMision();
 				System.out.println(p);
-				Mapa.imprimirMapa();
+				Mapa.imprimirMapa(m.getMapaPrueba());
 			
 				break;
 				
