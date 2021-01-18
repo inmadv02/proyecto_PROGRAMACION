@@ -59,6 +59,7 @@ public class Ppal {
 				Historia.imprimirPantallaCarga();
 				Historia.imprimirMision();
 				System.out.println(p);
+				System.out.println();
 				Mapa.imprimirMapa(m.getMapaPrueba());
 			
 				break;

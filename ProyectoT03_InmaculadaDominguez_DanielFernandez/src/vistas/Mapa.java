@@ -5,7 +5,14 @@ public class Mapa {
 	
 	public static void imprimirMapa (String [][] mapaPrueba) {
 		
-		System.out.println(mapaPrueba);
+		for (int i = 0; i < mapaPrueba.length; i++) {
+			for (int j = 0; j < mapaPrueba.length; j++) { 
+				
+				System.out.print(mapaPrueba[i][j]);
+			}
+			
+		}
+		
 		
 		
 //		//Primer intento
