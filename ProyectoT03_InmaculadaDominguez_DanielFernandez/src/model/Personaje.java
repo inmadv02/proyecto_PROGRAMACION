@@ -2,15 +2,13 @@ package model;
 
 public class Personaje {
 	
-	private String nombre;
+	private char nombre;
 	private int vida;
 	private int fuerza;
 	private int posI;
 	private int posJ;
 	
-	
-	
-	public Personaje(String nombre, int vida, int fuerza, int posI, int posJ) {
+	public Personaje(char nombre, int vida, int fuerza, int posI, int posJ) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
@@ -19,12 +17,12 @@ public class Personaje {
 		this.posJ = posJ;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public char getNombre() {
+		return nombre;	
 	}
 
-	public void setNombre(String nombreJ) {
-		this.nombre = nombreJ;
+	public void setNombre(char nombre) {
+		this.nombre = nombre;
 	}
 
 	public int getVida() {

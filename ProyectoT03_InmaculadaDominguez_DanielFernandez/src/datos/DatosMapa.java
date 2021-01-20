@@ -4,13 +4,14 @@ import java.util.Arrays;
 
 public class DatosMapa {
 	
-	String [][] mapaPrueba = {{"* ", "* ", "* ", "* ", "*\n"}, 
-							 {"* ", "  ", "  ", "  ", "*"}, 
-							 {"\n* ", "  ", "||", "  ", "*"},
-							 {"\n* ", "  ", "||", "  ", "*"},
-							 {"\n* ", "* ", "* ", "* ", "*"} };
 	
-	String [][] mapa = {{"*", "*", "*", "*", "*", "*", "*", "*",  "*"}, 
+	public static char [][] mapaPrueba = {{'*','*','*','*','*'}, 
+							 {'*' , ' ', ' ', ' ', '*'}, 
+							 {'*',' ','|',' ', '*'},
+							 {'*',' ','|',' ', '*'},
+							 {'*','*','*','*','*'} };
+	
+	public String [][] mapa = {{"*", "*", "*", "*", "*", "*", "*", "*",  "*"}, 
 					    {"*", " ", " ", " ", " ", " ", " ", " ",  "*"},
 					    {"*", " ", " ", " ", " ", " ", " ", " ",  "*"},
 				        {"*", " ", "||", " ", "||", " ", "||", " " , "*"},
@@ -22,27 +23,15 @@ public class DatosMapa {
 					    {"*", " ", " ", " ", " ", " ", " ", " ",  "*"},
 					    {"*", "*", "*", "*", "*", "*", "*", "*",  "*"}};
 
-	public String[][] getMapaPrueba() {
+	public static char[][] getMapaPrueba() {
 		return mapaPrueba;
 	}
 
-	public void setMapaPrueba(String[][] mapaPrueba) {
-		this.mapaPrueba = mapaPrueba;
+	public static void setMapaPrueba(char[][] mapaPrueba) {
+		DatosMapa.mapaPrueba = mapaPrueba;
 	}
 
-	public String[][] getMapa() {
-		return mapa;
-	}
 
-	public void setMapa(String[][] mapa) {
-		this.mapa = mapa;
-	}
-
-	@Override
-	public String toString() {
-		return "DatosMapa [mapaPrueba=" + Arrays.toString(mapaPrueba) + "]";
-	}
-	
 	
 	
 
