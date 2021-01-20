@@ -1,3 +1,7 @@
+/controller/
+/crud/
 /datos/
-/vistas/
+/model/
 /principal/
+/utilidades/
+/vistas/

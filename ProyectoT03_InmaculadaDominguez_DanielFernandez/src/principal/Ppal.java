@@ -18,6 +18,7 @@ public class Ppal {
 		Personaje p;
 		int vida, fuerza;
 		DatosMapa m = new DatosMapa();
+		String a;
 		
 		
 		Titulo.imprimirTitulo();
@@ -46,7 +47,7 @@ public class Ppal {
 			vida = ControllerPersonaje.generarVidaPersonaje();
 			fuerza = ControllerPersonaje.generarFuerzaPersonaje();
 			
-			p = new Personaje (nombreJ, vida, fuerza);
+			p = new Personaje (nombreJ, vida, fuerza, 1, 1);
 			
 			System.out.println("Pulsa 1 para empezar.");
 			
@@ -60,8 +61,10 @@ public class Ppal {
 				Historia.imprimirMision();
 				System.out.println(p);
 				System.out.println();
-				Mapa.imprimirMapa(m.getMapaPrueba());
-			
+				Mapa.imprimirMapaInicio(m.getMapaPrueba(),p);
+				a= Leer.dato();
+				Mapa.movimiento(m.getMapaPrueba(), a,p);;
+				Mapa.imprimirMapa(m.getMapaPrueba(),p);
 				break;
 				
 			default:

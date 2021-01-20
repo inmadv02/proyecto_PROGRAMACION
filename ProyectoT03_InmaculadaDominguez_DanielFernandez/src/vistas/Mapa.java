@@ -1,17 +1,56 @@
 package vistas;
 
+import model.Personaje;
+
 public class Mapa {
 
 	
-	public static void imprimirMapa (String [][] mapaPrueba) {
+	public static void imprimirMapaInicio (String [][] mapaPrueba, Personaje p) {
 		
 		for (int i = 0; i < mapaPrueba.length; i++) {
 			for (int j = 0; j < mapaPrueba.length; j++) { 
 				
+				mapaPrueba[1][1]= p.getNombre()+" ";
+				
 				System.out.print(mapaPrueba[i][j]);
+				
 			}
 			
 		}
+		
+	
+	}
+	
+	public static void imprimirMapa (String [][] mapaPrueba, Personaje p) {
+		
+		for (int i = 0; i < mapaPrueba.length; i++) {
+			for (int j = 0; j < mapaPrueba.length; j++) { 
+
+				System.out.print(mapaPrueba[i][j]);
+				
+			}
+			
+		}
+		
+	
+	}
+	
+		
+	public static void movimiento (String [][] mapaPrueba, String a, Personaje p) {
+		
+		int posI = 1;
+		int posJ = 1;
+		
+		mapaPrueba[posI][posJ] = p.getNombre()+ " ";
+		
+		if (a == "d") {
+			mapaPrueba[posI][posJ] = "  ";
+			posI++;
+			mapaPrueba[posI][posJ]=p.getNombre()+ " ";
+			imprimirMapa(mapaPrueba,p);
+			
+		}
+	}
 		
 		
 		
@@ -129,4 +168,4 @@ public class Mapa {
   }
 
 
-}
+

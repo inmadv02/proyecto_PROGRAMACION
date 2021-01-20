@@ -6,9 +6,9 @@ import model.Objetos;
 
 public class CrudPersonaje {
 	
-	public void crearPersonaje (String nombre, int vida, int fuerza) {
+	public void crearPersonaje (String nombre, int vida, int fuerza, int posI, int posJ) {
 		
-		Personaje p1 = new Personaje (nombre,vida,fuerza);
+		Personaje p1 = new Personaje (nombre,vida,fuerza, posI, posJ);
 		
 	}
 	
