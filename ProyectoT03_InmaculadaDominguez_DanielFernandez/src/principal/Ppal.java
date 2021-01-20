@@ -65,6 +65,7 @@ public class Ppal {
 				a= Leer.dato();
 				VistasMapa.movimiento(m.getMapaPrueba(), a,p);;
 				VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
+				VistasMochila.
 				break;
 				
 			default:

@@ -10,8 +10,57 @@ public class DatosObjetos {
 	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza());
 	
 	public static Objetos [] objetos = {mascarilla, pulverizador, gel};
-
 	
+	
+	
+	public static Objetos getMascarilla() {
+		return mascarilla;
+	}
+
+
+
+	public static void setMascarilla(Objetos mascarilla) {
+		DatosObjetos.mascarilla = mascarilla;
+	}
+
+
+
+	public static Objetos getPulverizador() {
+		return pulverizador;
+	}
+
+
+
+	public static void setPulverizador(Objetos pulverizador) {
+		DatosObjetos.pulverizador = pulverizador;
+	}
+
+
+
+	public static Objetos getGel() {
+		return gel;
+	}
+
+
+
+	public static void setGel(Objetos gel) {
+		DatosObjetos.gel = gel;
+	}
+
+
+
+	public static Objetos[] getObjetos() {
+		return objetos;
+	}
+
+
+
+	public static void setObjetos(Objetos[] objetos) {
+		DatosObjetos.objetos = objetos;
+	}
+
+
+
 	public String toString() {
 		return "DatosObjetos [mascarilla=" + mascarilla + ", pulverizador=" + pulverizador + ", gel=" + gel + "]";
 	}

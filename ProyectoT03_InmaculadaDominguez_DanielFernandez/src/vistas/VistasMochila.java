@@ -11,7 +11,7 @@ public class VistasMochila {
 		System.out.println();
 		System.out.println("\t \t _______________________________________________________________________");
 		System.out.println("\t \t|\t \t \t  \t    \t    \t   \t     |");
-		System.out.println("\t \t|  |" );
+		System.out.println("\t \t| " + mascarilla + " |" );
 		System.out.println("\t \t \t |___________________________________|");
 		
 	}
