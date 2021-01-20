@@ -1,6 +1,6 @@
 package vistas;
 
-public class Titulo {
+public class VistasTitulo {
 	
 	public static void imprimirTitulo () {
 		

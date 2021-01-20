@@ -1,8 +1,8 @@
 package principal;
 
-import vistas.Historia;
-import vistas.Mapa;
-import vistas.Titulo;
+import vistas.VistasHistoria;
+import vistas.VistasMapa;
+import vistas.VistasTitulo;
 import controller.ControllerPersonaje;
 import model.Personaje;
 import utilidades.Leer;
@@ -21,7 +21,7 @@ public class Ppal {
 		String a;
 		
 		
-		Titulo.imprimirTitulo();
+		VistasTitulo.imprimirTitulo();
 		
 		do {
 		
@@ -39,7 +39,7 @@ public class Ppal {
 		
 		case 1:
 			
-			Historia.imprimirIntro();
+			VistasHistoria.imprimirIntro();
 			
 			System.out.println("Di tu nombre. Debe contener solo una letra");
 			nombreJ = Leer.dato();
@@ -57,14 +57,14 @@ public class Ppal {
 			
 			case 1:
 				
-				Historia.imprimirPantallaCarga();
-				Historia.imprimirMision();
+				VistasHistoria.imprimirPantallaCarga();
+				VistasHistoria.imprimirMision();
 				System.out.println(p);
 				System.out.println();
-				Mapa.imprimirMapaInicio(m.getMapaPrueba(),p);
+				VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
 				a= Leer.dato();
-				Mapa.movimiento(m.getMapaPrueba(), a,p);;
-				Mapa.imprimirMapa(m.getMapaPrueba(),p);
+				VistasMapa.movimiento(m.getMapaPrueba(), a,p);;
+				VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
 				break;
 				
 			default:

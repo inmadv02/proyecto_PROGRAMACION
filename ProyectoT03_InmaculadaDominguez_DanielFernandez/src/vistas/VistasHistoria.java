@@ -1,6 +1,6 @@
 package vistas;
 
-public class Historia {
+public class VistasHistoria {
 	
 	public static void imprimirIntro () {
 		

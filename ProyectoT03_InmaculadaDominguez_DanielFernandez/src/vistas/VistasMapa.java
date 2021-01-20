@@ -2,7 +2,7 @@ package vistas;
 
 import model.Personaje;
 
-public class Mapa {
+public class VistasMapa {
 
 	
 	public static void imprimirMapaInicio (String [][] mapaPrueba, Personaje p) {
