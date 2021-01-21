@@ -7,14 +7,14 @@ import model.Personaje;
 public class VistasMapa {
 
 	
-	public static void imprimirMapaInicio (char [][] mapaPrueba, Personaje p) {
+	public static void imprimirMapaInicio (char [][] mapa, Personaje p) {
 		
-		for (int i = 0; i < mapaPrueba.length; i++) {
-			for (int j = 0; j < mapaPrueba.length; j++) { 
+		for (int i = 0; i < mapa.length; i++) {
+			for (int j = 0; j < mapa.length; j++) { 
 				
-				mapaPrueba[1][1]= p.getNombre();
+				mapa[1][1]= p.getNombre();
 				
-				System.out.print(mapaPrueba[i][j]);
+				System.out.print(mapa[i][j]);
 				
 			}
 			
@@ -23,13 +23,13 @@ public class VistasMapa {
 	
 	}
 	
-	public static void imprimirMapa (char [][] mapaPrueba, Personaje p) {
+	public static void imprimirMapa (char [][] mapa, Personaje p) {
 		
 		ControllerPersonaje.dibujarPersonaje(p);
 		
-		for (int i = 0; i < mapaPrueba.length; i++) {
+		for (int i = 0; i < mapa.length; i++) {
 			
-			System.out.println(mapaPrueba[i]);
+			System.out.println(mapa[i]);
 			
 		}
 		
@@ -40,7 +40,7 @@ public class VistasMapa {
 		
 		boolean[][] posiciones;
 		
-		posiciones = posicionesValidas(DatosMapa.mapaPrueba);
+		posiciones = posicionesValidas(DatosMapa.getMapa());
 		
 		if(a == 'a' || a == 'A') {
 			int posJ = p.getPosJ()-1;
@@ -91,6 +91,28 @@ public class VistasMapa {
 		}
 	}
 	
+	public static boolean [] [] posicionesValidas (char [][] mapa) {
+		
+		int num1 = 10;
+		int num2 = 11;
+		
+		boolean [][] posicionesValidas = new boolean [num1][num2];
+		
+		for (int i = 0; i < num1; i++) {
+			for (int j = 0; j < num2; j++) {
+				
+				if(mapa[i][j] == '*' || mapa[i][j] == '|') {
+					posicionesValidas[i][j] = true;
+				}else {
+					posicionesValidas[i][j] = false;
+				}
+				
+			}
+			
+		}
+		return posicionesValidas;
+	}
+	
 	
 //	public static void movimiento (char [][] mapaPrueba,Boolean [] [] posicionesValidas, String a, Personaje p) {
 //		
@@ -131,24 +153,7 @@ public class VistasMapa {
 ////		}
 //	}
 		
-	public static boolean [] [] posicionesValidas (char [][] mapaPrueba) {
-		
-		boolean [][] posicionesValidas = new boolean [4][4];
-		
-		for (int i = 0; i < posicionesValidas.length; i++) {
-			for (int j = 0; j < posicionesValidas.length; j++) {
-				
-				if(mapaPrueba[i][j] == '*' || mapaPrueba[i][j] == '|') {
-					posicionesValidas[i][j] = true;
-				}else {
-					posicionesValidas[i][j] = false;
-				}
-				
-			}
-			
-		}
-		return posicionesValidas;
-	}
+
 	
 //	public static void comprobarPosicionesValidas(char [][] mapaPrueba, Personaje p) {
 //		

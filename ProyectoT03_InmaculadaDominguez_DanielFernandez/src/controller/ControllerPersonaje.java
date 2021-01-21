@@ -35,14 +35,14 @@ public class ControllerPersonaje {
 		
 		int posI = p.getPosI();
 		int posJ = p.getPosJ();
-		DatosMapa.mapaPrueba[posI][posJ] = p.getNombre();
+		DatosMapa.mapa[posI][posJ] = p.getNombre();
 	}
 	
 	public static void borrarPersonaje(Personaje p) {
 		
 		int posI = p.getPosI();
 		int posJ = p.getPosJ();
-		DatosMapa.mapaPrueba[posI][posJ] = ' '; 
+		DatosMapa.mapa[posI][posJ] = ' '; 
 	}
 	
 	

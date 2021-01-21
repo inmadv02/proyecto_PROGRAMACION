@@ -28,12 +28,13 @@ public class PpalPruebas {
 		VistasHistoria.imprimirMision();
 		System.out.println(p);
 		System.out.println();
+		VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 		
 		while(true) {
-			VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
+			
 			a= Leer.datoChar();
 			VistasMapa.moverJugador(p, a);
-			VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
+			VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 		}
 		
 //		VistasMapa.comprobarPosicionesValidas(DatosMapa.getMapaPrueba(), p);
