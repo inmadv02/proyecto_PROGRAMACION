@@ -7,12 +7,12 @@ import model.Personaje;
 public class VistasMapa {
 
 	
-	public static void imprimirMapaInicio (String [][] mapaPrueba, Personaje p) {
+	public static void imprimirMapaInicio (char [][] mapaPrueba, Personaje p) {
 		
 		for (int i = 0; i < mapaPrueba.length; i++) {
 			for (int j = 0; j < mapaPrueba.length; j++) { 
 				
-				mapaPrueba[1][1]= p.getNombre()+" ";
+				mapaPrueba[1][1]= p.getNombre();
 				
 				System.out.print(mapaPrueba[i][j]);
 				
@@ -36,16 +36,52 @@ public class VistasMapa {
 	
 	}
 	
-	public static void moverJugador(Personaje p, String a) {
+	public static void moverJugador(Personaje p, char a) {
 		
 		boolean[][] posiciones;
 		
 		posiciones = posicionesValidas(DatosMapa.mapaPrueba);
 		
-		if(a == "a") {
+		if(a == 'a' || a == 'A') {
+			int posJ = p.getPosJ()-1;
+			
+			if (posiciones[p.getPosI()][posJ] == false) {
+				
+				ControllerPersonaje.borrarPersonaje(p);
+				p.setPosJ(posJ);
+				ControllerPersonaje.dibujarPersonaje(p);
+			}
+		
+		}
+		
+		if(a == 'd'|| a == 'D') {
+			int posJ = p.getPosJ()+1;
+			
+			if (posiciones[p.getPosI()][posJ] == false) {
+				
+				ControllerPersonaje.borrarPersonaje(p);
+				p.setPosJ(posJ);
+				ControllerPersonaje.dibujarPersonaje(p);
+			}
+		
+		}
+		
+		if(a == 'w'|| a == 'W') {
 			int posI = p.getPosI()-1;
 			
-			if (posiciones[p.getPosJ()][posI] == false) {
+			if (posiciones[posI][p.getPosJ()] == false) {
+				
+				ControllerPersonaje.borrarPersonaje(p);
+				p.setPosI(posI);
+				ControllerPersonaje.dibujarPersonaje(p);
+			}
+		
+		}
+		
+		if(a == 's'|| a == 'S') {
+			int posI = p.getPosI()+1;
+			
+			if (posiciones[posI][p.getPosJ()] == false) {
 				
 				ControllerPersonaje.borrarPersonaje(p);
 				p.setPosI(posI);
@@ -56,55 +92,48 @@ public class VistasMapa {
 	}
 	
 	
-	public static void movimiento (char [][] mapaPrueba,Boolean [] [] posicionesValidas, String a, Personaje p) {
-		
-		int posI = 1;
-		int posJ = 1;
-		int uno = 1;
-		
-		p.setPosI(posI);
-		p.setPosJ(posJ);
-		
-		
-		mapaPrueba[p.getPosI()][p.getPosJ()] = p.getNombre();
-		
-		for (int i = 0; i < posicionesValidas.length; i++) {
-			for (int j = 0; j < posicionesValidas.length; j++) {
-				
-				if(posicionesValidas[i][j]) {
-					if(a == "s") {
-						mapaPrueba[i][j] = ' ';
-						p.setPosJ(p.getPosJ()+uno);
-						mapaPrueba[p.getPosI()][p.getPosJ()] = p.getNombre();
-						imprimirMapa(mapaPrueba, p);
-						
-					}else {
-						
-					System.out.println("Movimiento no válido");
-					imprimirMapa(mapaPrueba,p);
-					
-				}
-			}
-		}
-			
-	}
-		
-		
-		
-//		if (a == "w") {
-//			
-//			mapaPrueba[posI][posJ] = "  ";
-//			posI++;
-//			mapaPrueba[posI][posJ]=p.getNombre()+ " ";
-//			imprimirMapa(mapaPrueba,p);
-//			
+//	public static void movimiento (char [][] mapaPrueba,Boolean [] [] posicionesValidas, String a, Personaje p) {
+//		
+//		int uno = 1;	
+//		
+//		mapaPrueba[p.getPosI()][p.getPosJ()] = p.getNombre();
+//		
+//		for (int i = 0; i < posicionesValidas.length; i++) {
+//			for (int j = 0; j < posicionesValidas.length; j++) {
+//				
+//				if(posicionesValidas[i][j]) {
+//					if(a == "s") {
+//						mapaPrueba[i][j] = ' ';
+//						p.setPosJ(p.getPosJ()+uno);
+//						mapaPrueba[p.getPosI()][p.getPosJ()] = p.getNombre();
+//						imprimirMapa(mapaPrueba, p);
+//						
+//					}else {
+//						
+//					System.out.println("Movimiento no válido");
+//					imprimirMapa(mapaPrueba,p);
+//					
+//				}
+//			}
 //		}
-	}
+//			
+//	}
+//		
+//		
+//		
+////		if (a == "w") {
+////			
+////			mapaPrueba[posI][posJ] = "  ";
+////			posI++;
+////			mapaPrueba[posI][posJ]=p.getNombre()+ " ";
+////			imprimirMapa(mapaPrueba,p);
+////			
+////		}
+//	}
 		
 	public static boolean [] [] posicionesValidas (char [][] mapaPrueba) {
 		
-		boolean [][] posicionesValidas;
-		posicionesValidas = new boolean [4][4];
+		boolean [][] posicionesValidas = new boolean [4][4];
 		
 		for (int i = 0; i < posicionesValidas.length; i++) {
 			for (int j = 0; j < posicionesValidas.length; j++) {
@@ -121,6 +150,37 @@ public class VistasMapa {
 		return posicionesValidas;
 	}
 	
+//	public static void comprobarPosicionesValidas(char [][] mapaPrueba, Personaje p) {
+//		
+//		
+//		ControllerPersonaje.dibujarPersonaje(p);
+//		
+//		for (int i = 0; i < mapaPrueba.length; i++) {
+//			
+//			System.out.println(mapaPrueba[i]);
+//			
+//		}
+//		
+//		boolean [][] posicionesValidas = posicionesValidas(DatosMapa.getMapaPrueba());
+//		
+//		
+//		for (int i = 0;  i < posicionesValidas.length; i++) {
+//			
+//			System.out.println("\n");
+//			
+//			for (int j = 0; j < posicionesValidas.length; j++) {
+//				
+//				if(posicionesValidas[i][j]==true) {
+//					
+//					System.out.print("1");
+//					
+//				}else {
+//					System.out.println("2");
+//				}
+//			}
+//		}
+//	}
+//	
 	
 
 

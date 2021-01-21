@@ -14,11 +14,11 @@ public class Ppal {
 		// TODO Auto-generated method stub
 		
 		int op, op2, cero = 0;
-		String nombreJ;
+		char nombreJ;
 		Personaje p;
-		int vida, fuerza;
+		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
-		String a;
+		char a;
 		
 		
 		VistasTitulo.imprimirTitulo();
@@ -42,10 +42,7 @@ public class Ppal {
 			VistasHistoria.imprimirIntro();
 			
 			System.out.println("Di tu nombre. Debe contener solo una letra");
-			nombreJ = Leer.dato();
-			
-			vida = ControllerPersonaje.generarVidaPersonaje();
-			fuerza = ControllerPersonaje.generarFuerzaPersonaje();
+			nombreJ = Leer.datoChar();
 			
 			p = new Personaje (nombreJ, vida, fuerza, 1, 1);
 			
@@ -61,11 +58,9 @@ public class Ppal {
 				VistasHistoria.imprimirMision();
 				System.out.println(p);
 				System.out.println();
-				VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
-				a= Leer.dato();
-				VistasMapa.movimiento(m.getMapaPrueba(), a,p);;
-				VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
-				VistasMochila.
+				a= Leer.datoChar();
+				VistasMapa.moverJugador(p, a);
+				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
 				break;
 				
 			default:
