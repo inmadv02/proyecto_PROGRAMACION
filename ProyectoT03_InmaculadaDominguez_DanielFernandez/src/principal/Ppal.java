@@ -26,15 +26,7 @@ public class Ppal {
 		char a;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
-<<<<<<< HEAD
 
-=======
-		
-
-		
-		
-		
->>>>>>> 28962c43c47e8ba8fc9ae7144a87b9ad269f25b5
 		VistasTitulo.imprimirTitulo();
 		
 		do {
@@ -57,10 +49,7 @@ public class Ppal {
 			
 			System.out.println("Di tu nombre. Debe contener solo una letra");
 			nombreJ = Leer.datoChar();
-<<<<<<< HEAD
-=======
 
->>>>>>> 28962c43c47e8ba8fc9ae7144a87b9ad269f25b5
 			
 			p = new Personaje (nombreJ, 50, 30, 1, 1);
 			
@@ -76,27 +65,24 @@ public class Ppal {
 				VistasHistoria.imprimirMision();
 				System.out.println(p);
 				System.out.println();
-<<<<<<< HEAD
-				a= Leer.datoChar();
-				VistasMapa.moverJugador(p, a);
-				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
-=======
 
 				a= Leer.datoChar();
 				VistasMapa.moverJugador(p, a);
 				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
 
->>>>>>> 28962c43c47e8ba8fc9ae7144a87b9ad269f25b5
+
+				a= Leer.datoChar();
+				VistasMapa.moverJugador(p, a);
+				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
+
+
 				//VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
 				//a= Leer.dato();
 				//VistasMapa.movimiento(m.getMapaPrueba(), posicionesValidas, a, p);
 				//VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
 				VistasMochila.imprimirMochila(DatosObjetos.getObjetos());
 			
-<<<<<<< HEAD
-=======
 
->>>>>>> 28962c43c47e8ba8fc9ae7144a87b9ad269f25b5
 				break;
 				
 			default:

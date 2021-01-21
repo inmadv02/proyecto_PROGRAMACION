@@ -94,7 +94,7 @@ public class VistasMapa {
 	public static boolean [] [] posicionesValidas (char [][] mapa) {
 		
 		int num1 = 10;
-		int num2 = 11;
+		int num2 = 15;
 		
 		boolean [][] posicionesValidas = new boolean [num1][num2];
 		
