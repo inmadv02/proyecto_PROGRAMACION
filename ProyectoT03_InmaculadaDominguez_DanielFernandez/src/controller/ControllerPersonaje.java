@@ -45,6 +45,14 @@ public class ControllerPersonaje {
 		DatosMapa.mapa[posI][posJ] = ' '; 
 	}
 	
+	public static void pelear(Personaje p ,Personaje p1) {
+		
+		if (p.getPosI() == p1.getPosI() && p.getPosJ() == p1.getPosJ()) {
+			
+			p.setVida(p.getVida()-p1.getFuerza());	
+		}	
+	}
+	
 	
 	
 	
