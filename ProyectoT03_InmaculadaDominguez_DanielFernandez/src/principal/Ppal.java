@@ -7,6 +7,10 @@ import controller.ControllerPersonaje;
 import model.Personaje;
 import utilidades.Leer;
 import datos.DatosMapa;
+import model.Mochila;
+import model.Objetos;
+import datos.DatosObjetos;
+import vistas.VistasMochila;
 
 public class Ppal {
 
@@ -18,7 +22,14 @@ public class Ppal {
 		Personaje p;
 		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
+<<<<<<< HEAD
 		char a;
+=======
+		
+		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
+		String a;
+>>>>>>> 160093211d4ad08e5f1c2d50948b90a4abd97df1
+		
 		
 		
 		VistasTitulo.imprimirTitulo();
@@ -43,8 +54,12 @@ public class Ppal {
 			
 			System.out.println("Di tu nombre. Debe contener solo una letra");
 			nombreJ = Leer.datoChar();
+<<<<<<< HEAD
+=======
 			
-			p = new Personaje (nombreJ, vida, fuerza, 1, 1);
+>>>>>>> 160093211d4ad08e5f1c2d50948b90a4abd97df1
+			
+			p = new Personaje (nombreJ, 50, 30, 1, 1);
 			
 			System.out.println("Pulsa 1 para empezar.");
 			
@@ -58,9 +73,18 @@ public class Ppal {
 				VistasHistoria.imprimirMision();
 				System.out.println(p);
 				System.out.println();
+<<<<<<< HEAD
 				a= Leer.datoChar();
 				VistasMapa.moverJugador(p, a);
 				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
+=======
+				//VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
+				//a= Leer.dato();
+				//VistasMapa.movimiento(m.getMapaPrueba(), posicionesValidas, a, p);
+				//VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
+				VistasMochila.imprimirMochila(DatosObjetos.getObjetos());
+			
+>>>>>>> 160093211d4ad08e5f1c2d50948b90a4abd97df1
 				break;
 				
 			default:
