@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 /datos/
 /vistas/
 /principal/
 /controller/
+=======
+/controller/
+/crud/
+/datos/
+/model/
+/principal/
+/utilidades/
+/vistas/
+>>>>>>> 28962c43c47e8ba8fc9ae7144a87b9ad269f25b5
