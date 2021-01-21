@@ -7,6 +7,10 @@ import controller.ControllerPersonaje;
 import model.Personaje;
 import utilidades.Leer;
 import datos.DatosMapa;
+import model.Mochila;
+import model.Objetos;
+import datos.DatosObjetos;
+import vistas.VistasMochila;
 
 public class Ppal {
 
@@ -18,7 +22,10 @@ public class Ppal {
 		Personaje p;
 		int vida, fuerza;
 		DatosMapa m = new DatosMapa();
+		
+		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
 		String a;
+		
 		
 		
 		VistasTitulo.imprimirTitulo();
@@ -60,10 +67,11 @@ public class Ppal {
 				System.out.println(p);
 				System.out.println();
 				//VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
-				a= Leer.dato();
-				//VistasMapa.movimiento(m.getMapaPrueba(), a,p);;
-				VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
-				//VistasMochila.
+				//a= Leer.dato();
+				//VistasMapa.movimiento(m.getMapaPrueba(), posicionesValidas, a, p);
+				//VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
+				VistasMochila.imprimirMochila(DatosObjetos.getObjetos());
+			
 				break;
 				
 			default:

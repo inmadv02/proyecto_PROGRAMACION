@@ -2,19 +2,19 @@ package model;
 
 public class Mochila {
 	
-	private Objetos [] o;
+	private Objetos [] objetos;
 
-	public Mochila(Objetos[] o) {
+	public Mochila(Objetos[] objetos) {
 		super();
-		this.o = o;
+		this.objetos = objetos;
 	}
 
 	public Objetos[] getO() {
-		return o;
+		return objetos;
 	}
 
 	public void setO(Objetos[] o) {
-		this.o = o;
+		this.objetos = o;
 	}
 	
 	

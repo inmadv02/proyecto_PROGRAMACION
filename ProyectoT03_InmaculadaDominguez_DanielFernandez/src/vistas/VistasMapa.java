@@ -7,12 +7,12 @@ import model.Personaje;
 public class VistasMapa {
 
 	
-	public static void imprimirMapaInicio (String [][] mapaPrueba, Personaje p) {
+	public static void imprimirMapaInicio (char [][] mapaPrueba, Personaje p) {
 		
 		for (int i = 0; i < mapaPrueba.length; i++) {
 			for (int j = 0; j < mapaPrueba.length; j++) { 
 				
-				mapaPrueba[1][1]= p.getNombre()+" ";
+				mapaPrueba[1][1]= p.getNombre();
 				
 				System.out.print(mapaPrueba[i][j]);
 				
