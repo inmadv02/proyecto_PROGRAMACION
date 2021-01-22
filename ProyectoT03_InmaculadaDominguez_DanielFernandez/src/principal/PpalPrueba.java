@@ -1,21 +1,17 @@
 package principal;
 
-import vistas.VistasHistoria;
-import vistas.VistasMapa;
-import vistas.VistasTitulo;
 import controller.ControllerPartida;
 import controller.ControllerPersonaje;
+import datos.DatosMapa;
 import model.Personaje;
 import utilidades.Leer;
-import datos.DatosMapa;
-import datos.DatosObjetos;
+import vistas.VistasMapa;
 
-public class PpalPruebas {
+public class PpalPrueba {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+
 		int op, op2, cero = 0;
 		char nombreJ;
 		Personaje p, p1;
@@ -50,12 +46,7 @@ public class PpalPruebas {
 			
 		}while(ControllerPartida.comprobarGanador(p));
 		
-			
-		System.out.println("Has ganado");
 
-		
-	
-		
 	}
 
 }
