@@ -3,6 +3,7 @@ package principal;
 import vistas.VistasHistoria;
 import vistas.VistasMapa;
 import vistas.VistasTitulo;
+import controller.ControllerPartida;
 import controller.ControllerPersonaje;
 import crud.CrudObjetos;
 import model.Personaje;
@@ -24,8 +25,9 @@ public class Ppal {
 		Personaje p;
 		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
-		Objetos [] objetos;
+		//Objetos [] objetos = new Objetos [DatosObjetos.mascarilla, DatosObjetos.pulverizador, DatosObjetos.gel, DatosObjetos.papel, DatosObjetos.harina, DatosObjetos.mecha];
 		CrudPersonaje crp = new CrudPersonaje();
+		DatosObjetos dob = new DatosObjetos();
 		char a;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
@@ -65,29 +67,32 @@ public class Ppal {
 			case 1:
 				
 				VistasHistoria.imprimirPantallaCarga();
-				VistasHistoria.imprimirMision();
+				VistasHistoria.imprimirMisionInicio(dob.objetos);
 				System.out.println(p);
 				System.out.println();
 				
-				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				VistasMapa.imprimirMapa(m.getMapa(),p);
 
 				a= Leer.datoChar();
 				VistasMapa.moverJugador(p, a);
-				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				VistasMapa.imprimirMapa(m.getMapa(),p);
 				
-				//while(true) {
+				do{
 					
 					a= Leer.datoChar();
 					VistasMapa.moverJugador(p, a);
-					VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+					VistasMapa.imprimirMapa(m.getMapa(),p);
 				//}
 				
 					System.out.println("¿Qué objeto quieres usar?");
-					VistasMochila.imprimirMochilaInicio(DatosObjetos.getObjetos());
+					VistasMochila.imprimirMochilaInicio(dob.getObjetos());
 					usar = Leer.datoInt();
-					CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
-					VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos(), usar);
-					//crp.modificarFuerzayVida(p, objetos, usar);
+					CrudObjetos.borrarObjeto(usar, dob.getObjetos());
+					VistasMochila.imprimirMochilaUpdate(dob.getObjetos(), usar);
+					crp.modificarFuerzayVidaObj(p, dob.getObjetos(), usar);
+					System.out.println(p);
+					
+				}while(ControllerPartida.comprobarGanador(p));
 					
 				break;
 				

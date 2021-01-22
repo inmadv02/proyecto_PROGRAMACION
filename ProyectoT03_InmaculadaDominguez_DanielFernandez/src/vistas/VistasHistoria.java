@@ -1,5 +1,8 @@
 package vistas;
 
+import datos.DatosObjetos;
+import model.Objetos;
+
 public class VistasHistoria {
 	
 	public static void imprimirIntro () {
@@ -87,7 +90,7 @@ public class VistasHistoria {
 		
 	}
 	
-	public static void imprimirMision () {
+	public static void imprimirMisionInicio (Objetos [] objetos) {
 		
 		System.out.println();
 		System.out.println("\t \t \t  ___________________________________");
@@ -100,8 +103,26 @@ public class VistasHistoria {
 		System.out.println("Como hemos dicho antes, cualquier OBJETO proporciona ventajas sobre los otros");
 		System.out.println("Por eso, si quieres seguir sobreviviendo, debes hacer una parada en el supermercado\n"
 				+ "más cercano: tu Mercadona de confianza.");
-		System.out.println("Todo lo que cojas se guardará en tu MOCHILA, y solo necesitas usar las teclas\n"
-				+ "W, S, A y D para MOVERTE.");
+		System.out.println("Allí tendrás que comprar los siguientes productos: ");
+		System.out.println();
+		System.out.println();
+		System.out.println("\t \t \t    ______||________||_______||______");
+		System.out.println("\t \t \t   |      ||        ||       ||      |");
+		System.out.println("\t \t \t   |\t\t\t \t     |");
+		System.out.println("\t \t \t   |     L I S T A   C O M P R A     |");
+		System.out.println("\t \t \t   |   \t\t\t\t     |");
+		//for (int i = 3; i < objetos.length; i++) {
+		System.out.println("\t \t \t   | \t     " + objetos[3].getNombre() + "\t     |" );
+		System.out.println("\t \t \t   |\t \t " + objetos[4].getNombre() + "\t     |" );
+		System.out.println("\t \t \t   | \t     " + objetos[5].getNombre() + "\t     |" );
+		//}
+		System.out.println("\t \t \t   | \t\t\t\t     |");
+		System.out.println("\t \t \t   |_________________________________|");
+		System.out.println();	
+		System.out.println();
+		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
+				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
+				+ "W, S, A y D \npara MOVERTE.");
 		System.out.println();
 		System.out.println();
 		System.out.println("\t \t \t      ___________________________");
@@ -115,6 +136,20 @@ public class VistasHistoria {
 		System.out.println("\t \t \t \t \t   ·");
 		System.out.println("\t \t \t \t \t   ·");
 		System.out.println("\t \t \t \t \t   ·");
+		
+	}
+	
+	public static void imprimirTasks (Objetos [] objetos) {
+		
+		
+		//ale = Math.Random()
+		System.out.println();
+		System.out.println();
+		System.out.println("\t  _________________________________________");
+		System.out.println("\t |  \t\t\t\t  |");
+		//System.out.println("\t | \t Objetivo: Coger " + objetos[ale].getNombre() + "\t |");
+		System.out.println("");
+		
 		
 	}
 
