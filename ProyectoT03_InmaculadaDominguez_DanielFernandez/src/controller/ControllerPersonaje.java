@@ -46,11 +46,33 @@ public class ControllerPersonaje {
 	}
 	
 	public static void pelear(Personaje p ,Personaje p1) {
+			
+			p.setVida(p.getVida()-p1.getFuerza());	
+			
+	}
+	
+	public static void sumarContadorMuertes(Personaje p) {
+		
+		int uno = 1;
+		
+		p.setContadorMuertes(p.getContadorMuertes()+uno);
+	}
+	
+	public static boolean comprobarPosicion (Personaje p, Personaje p1) {
+		
+		boolean b = false;
 		
 		if (p.getPosI() == p1.getPosI() && p.getPosJ() == p1.getPosJ()) {
 			
-			p.setVida(p.getVida()-p1.getFuerza());	
-		}	
+			b = true;
+			
+			return 	b;
+			
+		}else {
+			
+			return b;
+		}
+			
 	}
 	
 	

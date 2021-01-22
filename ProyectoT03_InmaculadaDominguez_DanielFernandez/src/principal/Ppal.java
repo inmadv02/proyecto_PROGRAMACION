@@ -51,7 +51,7 @@ public class Ppal {
 			nombreJ = Leer.datoChar();
 
 			
-			p = new Personaje (nombreJ, 50, 30, 1, 1);
+			p = new Personaje (nombreJ, 50, 30, 1, 1,0);
 			
 			System.out.println("Pulsa 1 para empezar.");
 			

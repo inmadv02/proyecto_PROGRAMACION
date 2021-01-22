@@ -7,14 +7,16 @@ public class Personaje {
 	private int fuerza;
 	private int posI;
 	private int posJ;
+	private int contadorMuertes;
 	
-	public Personaje(char nombre, int vida, int fuerza, int posI, int posJ) {
+	public Personaje(char nombre, int vida, int fuerza, int posI, int posJ, int contadorMuertes) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
 		this.fuerza = fuerza;
 		this.posI = posI;
 		this.posJ = posJ;
+		this.contadorMuertes = contadorMuertes;
 	}
 
 	public char getNombre() {
@@ -57,13 +59,22 @@ public class Personaje {
 		this.posJ = posJ;
 	}
 
+	public int getContadorMuertes() {
+		return contadorMuertes;
+	}
+
+	public void setContadorMuertes(int contadorMuertes) {
+		this.contadorMuertes = contadorMuertes;
+	}
+
 	public String toString() {
 		return "\t \t \t       _________________________\r\n"
 				+ "\t \t \t      |\t\t\t\t|\r\n"
 				+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
 				+ "\t \t \t      | Vida: " + vida + "\t \t|\r\n"
 				+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
-				+ "\t \t \t      |_________________________|";
+				+ "\t \t \t      |_________________________|"
+				+"ContadorMuertes ="+contadorMuertes;
 	}
 	
 	

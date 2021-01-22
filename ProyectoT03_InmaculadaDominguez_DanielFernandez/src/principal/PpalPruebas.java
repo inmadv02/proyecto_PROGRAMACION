@@ -3,6 +3,7 @@ package principal;
 import vistas.VistasHistoria;
 import vistas.VistasMapa;
 import vistas.VistasTitulo;
+import controller.ControllerPartida;
 import controller.ControllerPersonaje;
 import model.Personaje;
 import utilidades.Leer;
@@ -17,29 +18,43 @@ public class PpalPruebas {
 		
 		int op, op2, cero = 0;
 		char nombreJ;
-		Personaje p;
+		Personaje p, p1;
 		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
 		char a;
 		
-		p = new Personaje ('a',20,20,1,1);
+		p = new Personaje ('a',20,20,1,1,0);
+		p1 = new Personaje ('b',10,10,3,3,0);
 
-		VistasHistoria.imprimirPantallaCarga();
-		VistasHistoria.imprimirMision();
-		System.out.println(p);
-		System.out.println();
 		VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 		
-		while(true) {
+		System.out.println();
+		
+		do {
 			
-			a= Leer.datoChar();
-			VistasMapa.moverJugador(p, a);
-			VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
-		}
 		
-//		VistasMapa.comprobarPosicionesValidas(DatosMapa.getMapaPrueba(), p);
+			while(true) {
+				
+			
+				a= Leer.datoChar();
+				VistasMapa.moverJugador(p, a);
+				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				
+			if(ControllerPersonaje.comprobarPosicion(p, p1)) {
+				
+				ControllerPersonaje.pelear(p, p1);
+				ControllerPersonaje.sumarContadorMuertes(p);
+				System.out.println(p);
+				}
+			}
+			
+		}while(ControllerPartida.comprobarGanador(p));
 		
+			
+		System.out.println("Has ganado");
+
 		
+	
 		
 	}
 
