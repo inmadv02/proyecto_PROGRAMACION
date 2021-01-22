@@ -11,8 +11,6 @@ public class DatosObjetos {
 	
 	public static Objetos [] objetos = {mascarilla, pulverizador, gel};
 	
-	
-	
 	public static Objetos getMascarilla() {
 		return mascarilla;
 	}
