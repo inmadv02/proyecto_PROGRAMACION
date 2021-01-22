@@ -2,34 +2,12 @@ package controller;
 
 import java.util.Random;
 
+import model.Enemigo;
 import model.Personaje;
 import datos.DatosMapa;
 
 public class ControllerPersonaje {
 	
-	
-	public static int generarVidaEnemigos() {
-		
-		Random r = new Random (System.nanoTime());
-		int vida;
-		int desde = 10 , hasta =20, uno = 1 ;
-		
-		vida = r.nextInt(hasta-desde-uno)+desde;
-		
-		return vida;
-		
-	}
-	
-	public static int generarFuerzaEnemigos() {
-		
-		Random r = new Random (System.nanoTime());
-		int fuerza;
-		int desde = 8,hasta = 10, uno = 1;
-		
-		fuerza = r.nextInt(hasta-desde-uno)+desde;
-		
-		return fuerza;
-	}
 	
 	public static void dibujarPersonaje (Personaje p) {
 		
@@ -45,9 +23,37 @@ public class ControllerPersonaje {
 		DatosMapa.mapa[posI][posJ] = ' '; 
 	}
 	
-	public static void pelear(Personaje p ,Personaje p1) {
+	public static boolean comprobarVidaJugador(Personaje p) {
+		
+		boolean b = true;
+		
+		if(p.getVida() <= 0) {
+			b = false;
+		}
+		return b;
+	}
+	
+	public static int posicionEnemigos(Personaje p) {
+		
+		int index = 0;
+		
+		if (p.getPosI() == 3 && p.getPosJ() == 3) {
+			index = 0;
+		}
+		if (p.getPosI() == 3 && p.getPosJ() == 6) {
+			index = 1;
+		}
+		if (p.getPosI() == 3 && p.getPosJ() == 9) {
+			index = 2;
+		}
+		
+		return index;
+		
+	}
+	
+	public static void pelear(Personaje p ,Enemigo[]listaEnemigos, int index) {
 			
-			p.setVida(p.getVida()-p1.getFuerza());	
+			p.setVida(p.getVida()-listaEnemigos[index].getFuerza());	
 			
 	}
 	
@@ -58,20 +64,23 @@ public class ControllerPersonaje {
 		p.setContadorMuertes(p.getContadorMuertes()+uno);
 	}
 	
-	public static boolean comprobarPosicion (Personaje p, Personaje p1) {
+	public static boolean comprobarPosicion (Personaje p, Enemigo [] listaEnemigos) {
 		
 		boolean b = false;
 		
-		if (p.getPosI() == p1.getPosI() && p.getPosJ() == p1.getPosJ()) {
+		for (int i = 0; i < listaEnemigos.length; i++) {
 			
-			b = true;
+			if (p.getPosI() == listaEnemigos[i].getPosI() && p.getPosJ() == listaEnemigos[i].getPosJ() && listaEnemigos[i].isActivo() == true) {
+				
+				b = true;
+				listaEnemigos[i].setActivo(false);
+				return 	b;
+				
+			}
 			
-			return 	b;
-			
-		}else {
-			
-			return b;
 		}
+		return b;
+		
 			
 	}
 	

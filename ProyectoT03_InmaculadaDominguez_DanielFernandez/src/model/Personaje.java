@@ -73,8 +73,7 @@ public class Personaje {
 				+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
 				+ "\t \t \t      | Vida: " + vida + "\t \t|\r\n"
 				+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
-				+ "\t \t \t      |_________________________|"
-				+"ContadorMuertes ="+contadorMuertes;
+				+ "\t \t \t      |_________________________|";
 	}
 	
 	

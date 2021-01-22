@@ -8,8 +8,10 @@ public class Enemigo {
 	private int posI;
 	private int posJ;
 	private boolean activo;
+	private int posicionArray;
 	
-	public Enemigo(String nombre, int vida, int fuerza, int posI, int posJ, boolean activo) {
+	
+	public Enemigo(String nombre, int vida, int fuerza, int posI, int posJ, boolean activo, int posicionArray) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
@@ -17,8 +19,8 @@ public class Enemigo {
 		this.posI = posI;
 		this.posJ = posJ;
 		this.activo = activo;
+		this.posicionArray = posicionArray;
 	}
-
 
 	public String getNombre() {
 		return nombre;
