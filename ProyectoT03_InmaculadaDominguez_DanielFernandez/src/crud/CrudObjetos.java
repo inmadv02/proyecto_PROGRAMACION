@@ -8,8 +8,6 @@ import datos.DatosObjetos;
 
 public class CrudObjetos {
 	
-
-	
 	
 	public static void borrarObjeto(int usar, Objetos [] objetos){
 		int posicion;

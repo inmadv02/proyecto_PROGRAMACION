@@ -6,19 +6,15 @@ import model.Objetos;
 
 public class CrudPersonaje {
 	
-	public void modificarVida (Personaje p1,Personaje p2){
+	public void modificarVida (Personaje p,Personaje p2){
 		
-		p1.setVida(p1.getVida()-p2.getFuerza());
+		p.setVida(p.getVida()-p2.getFuerza());
 	}
 	
-	public void modificarFuerzaObjeto (Personaje p1, Objetos o1){
+	public void modificarFuerzayVida (Personaje p, Objetos [] objetos, int usar){
 		
-		p1.setFuerza(p1.getFuerza()+o1.getBonusFuerza());
-	}
-	
-	public void modificarVidaObjeto (Personaje p1, Objetos o1) {
-		
-		p1.setVida(p1.getVida()+o1.getBonusVida());
+		p.setFuerza(p.getFuerza()+objetos[usar-1].getBonusFuerza());	
+		p.setVida(p.getVida()+objetos[usar-1].getBonusVida());
 	}
 		
 		

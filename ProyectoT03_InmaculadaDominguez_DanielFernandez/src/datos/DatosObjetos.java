@@ -8,8 +8,11 @@ public class DatosObjetos {
 	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
+	public static Objetos papel = new Objetos ("Papel higiénico", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
+	public static Objetos harina = new Objetos ("Harina   ", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
+	public static Objetos mecha = new Objetos ("Carne La Mechá", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
 	
-	public static Objetos [] objetos = {mascarilla, pulverizador, gel};
+	public static Objetos [] objetos = {mascarilla, pulverizador, gel, papel, harina, mecha};
 	
 	
 	
@@ -45,6 +48,42 @@ public class DatosObjetos {
 
 	public static void setGel(Objetos gel) {
 		DatosObjetos.gel = gel;
+	}
+
+
+
+	public static Objetos getPapel() {
+		return papel;
+	}
+
+
+
+	public static void setPapel(Objetos papel) {
+		DatosObjetos.papel = papel;
+	}
+
+
+
+	public static Objetos getHarina() {
+		return harina;
+	}
+
+
+
+	public static void setHarina(Objetos harina) {
+		DatosObjetos.harina = harina;
+	}
+
+
+
+	public static Objetos getMecha() {
+		return mecha;
+	}
+
+
+
+	public static void setMecha(Objetos mecha) {
+		DatosObjetos.mecha = mecha;
 	}
 
 

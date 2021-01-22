@@ -45,8 +45,7 @@ public class PpalPrueba {
 			}
 			
 		}while(ControllerPartida.comprobarGanador(p));
-		
-
+	    
 	}
 
 }

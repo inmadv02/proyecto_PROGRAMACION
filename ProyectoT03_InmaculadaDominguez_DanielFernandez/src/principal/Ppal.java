@@ -12,6 +12,7 @@ import model.Mochila;
 import model.Objetos;
 import datos.DatosObjetos;
 import vistas.VistasMochila;
+import crud.CrudPersonaje;
 
 public class Ppal {
 
@@ -23,6 +24,8 @@ public class Ppal {
 		Personaje p;
 		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
+		Objetos [] objetos;
+		CrudPersonaje crp = new CrudPersonaje();
 		char a;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
@@ -84,6 +87,7 @@ public class Ppal {
 					usar = Leer.datoInt();
 					CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
 					VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos(), usar);
+					//crp.modificarFuerzayVida(p, objetos, usar);
 					
 				break;
 				

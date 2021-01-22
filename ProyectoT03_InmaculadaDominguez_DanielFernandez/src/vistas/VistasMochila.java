@@ -18,11 +18,14 @@ public class VistasMochila {
 		
 		for (int i = 0; i < objetos.length; i++) {
 			
+			if (objetos[i].isActivo() == true) {
+			
 			
 			System.out.println("\t \t|| ["+ (i+uno) +"] " + objetos[i].getNombre()+ "\t  \t " 
 			+ objetos[i].getBonusVida() + "\t \t   " + objetos[i].getBonusFuerza() + " \t    ||");
 			
 			}
+		}
 		System.out.println("\t \t||\t \t \t  \t    \t    \t   \t    ||");
 		System.out.println("\t \t ============================================================");
 	
