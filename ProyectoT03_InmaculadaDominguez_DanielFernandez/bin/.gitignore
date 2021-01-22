@@ -1,4 +1,5 @@
 /principal/
-/controller/
-/datos/
 /vistas/
+/crud/
+/datos/
+/model/
