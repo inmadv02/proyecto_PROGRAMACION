@@ -27,11 +27,7 @@ public class PpalPrueba {
 		System.out.println();
 		
 		do {
-			
-		
-			while(true) {
-				
-			
+	
 				a= Leer.datoChar();
 				VistasMapa.moverJugador(p, a);
 				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
@@ -42,10 +38,15 @@ public class PpalPrueba {
 				ControllerPersonaje.sumarContadorMuertes(p);
 				System.out.println(p);
 				}
-			}
+			
 			
 		}while(ControllerPartida.comprobarGanador(p));
+<<<<<<< HEAD
 	    
+=======
+		
+		System.out.println("Has ganado");
+>>>>>>> cd5778dd7329930291fae1f9fb0fdd53143de90c
 	}
 
 }
