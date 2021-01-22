@@ -4,6 +4,7 @@ import vistas.VistasHistoria;
 import vistas.VistasMapa;
 import vistas.VistasTitulo;
 import controller.ControllerPersonaje;
+import crud.CrudObjetos;
 import model.Personaje;
 import utilidades.Leer;
 import datos.DatosMapa;
@@ -17,12 +18,11 @@ public class Ppal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op, op2, cero = 0;
+		int op, op2, cero = 0, usar;
 		char nombreJ;
 		Personaje p;
 		int vida = 30, fuerza = 30;
 		DatosMapa m = new DatosMapa();
-
 		char a;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
@@ -65,24 +65,26 @@ public class Ppal {
 				VistasHistoria.imprimirMision();
 				System.out.println(p);
 				System.out.println();
+				
+				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 
 				a= Leer.datoChar();
 				VistasMapa.moverJugador(p, a);
-				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
-
-
-				a= Leer.datoChar();
-				VistasMapa.moverJugador(p, a);
-				VistasMapa.imprimirMapa(DatosMapa.getMapaPrueba(),p);
-
-
-				//VistasMapa.imprimirMapaInicio(m.getMapaPrueba(),p);
-				//a= Leer.dato();
-				//VistasMapa.movimiento(m.getMapaPrueba(), posicionesValidas, a, p);
-				//VistasMapa.imprimirMapa(m.getMapaPrueba(),p);
-				VistasMochila.imprimirMochila(DatosObjetos.getObjetos());
-			
-
+				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				
+				//while(true) {
+					
+					a= Leer.datoChar();
+					VistasMapa.moverJugador(p, a);
+					VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				//}
+				
+					System.out.println("¿Qué objeto quieres usar?");
+					VistasMochila.imprimirMochilaInicio(DatosObjetos.getObjetos());
+					usar = Leer.datoInt();
+					CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
+					VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos(), usar);
+					
 				break;
 				
 			default:

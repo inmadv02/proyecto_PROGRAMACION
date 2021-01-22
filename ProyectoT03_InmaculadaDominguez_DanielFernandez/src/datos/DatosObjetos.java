@@ -5,9 +5,9 @@ import controller.ControllerObjeto;
 
 public class DatosObjetos {
 	
-	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza());
-	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza());
-	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza());
+	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
+	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
+	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	
 	public static Objetos [] objetos = {mascarilla, pulverizador, gel};
 	

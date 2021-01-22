@@ -4,17 +4,19 @@ import controller.ControllerObjeto;
 
 import model.Objetos;
 
+import datos.DatosObjetos;
+
 public class CrudObjetos {
 	
-	public void crearObjeto(String nombre, int bonusVida, int bonusFuerza){
+
+	
+	
+	public static void borrarObjeto(int usar, Objetos [] objetos){
+		int posicion;
+		posicion = usar - 1;
 		
-		Objetos o; //Creo que sería mejor crear los objetos en la clase objeto y luego traerlo aquí
-		           //para poder borrarlo en el método de abajo con mayor facilidad.
+		objetos[posicion].setActivo(false);
 		
-		o = new Objetos(ControllerObjeto.GenerarBonusVida(),ControllerObjeto.GenerarBonusFuerza());
 	}
-	
-	
-	//public borrarObjeto(){
 
 }

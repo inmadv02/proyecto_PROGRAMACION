@@ -5,13 +5,14 @@ public class Objetos {
 	private String nombre;
 	private int bonusVida;
 	private int bonusFuerza;
-	//private double bonusEnergia;
+	private boolean activo;
 	
-	public Objetos(String nombre, int bonusVida, int bonusFuerza) {
+	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo) {
 		super();
 		this.nombre = nombre;
 		this.bonusVida = bonusVida;
 		this.bonusFuerza = bonusFuerza;
+		this.activo = activo;
 	}
 
 	public Objetos(int bonusVida, int bonusFuerza) {
@@ -19,8 +20,8 @@ public class Objetos {
 		this.bonusVida = bonusVida;
 		this.bonusFuerza = bonusFuerza;
 	}
-
-
+	
+	
 
 	public String getNombre() {
 		return nombre;
@@ -44,6 +45,14 @@ public class Objetos {
 
 	public void setBonusFuerza(int bonusFuerza) {
 		this.bonusFuerza = bonusFuerza;
+	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 
 	@Override
