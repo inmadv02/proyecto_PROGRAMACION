@@ -11,7 +11,7 @@ public class CrudPersonaje {
 		p.setVida(p.getVida()-p2.getFuerza());
 	}
 	
-	public void modificarFuerzayVida (Personaje p, Objetos [] objetos, int usar){
+	public void modificarFuerzayVidaObj (Personaje p, Objetos [] objetos, int usar){
 		
 		p.setFuerza(p.getFuerza()+objetos[usar-1].getBonusFuerza());	
 		p.setVida(p.getVida()+objetos[usar-1].getBonusVida());

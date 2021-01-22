@@ -41,12 +41,10 @@ public class PpalPrueba {
 			
 			
 		}while(ControllerPartida.comprobarGanador(p));
-<<<<<<< HEAD
-	    
-=======
+
 		
 		System.out.println("Has ganado");
->>>>>>> cd5778dd7329930291fae1f9fb0fdd53143de90c
+
 	}
 
 }
