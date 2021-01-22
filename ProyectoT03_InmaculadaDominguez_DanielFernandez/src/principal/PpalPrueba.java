@@ -14,7 +14,6 @@ public class PpalPrueba {
 		// TODO Auto-generated method stub
 
 	
-
 		Personaje p;
 		char a;
 		int index = 0;
@@ -42,7 +41,6 @@ public class PpalPrueba {
 					
 					ControllerPersonaje.pelear(p, DatosEnemigos.getListaEnemigos(),index);
 				
-<<<<<<< HEAD
 					ControllerPersonaje.sumarContadorMuertes(p);
 					System.out.println(p);
 					}
@@ -55,18 +53,7 @@ public class PpalPrueba {
 		
 		}while(ControllerPersonaje.comprobarVidaJugador(p));
 		System.out.println("Has perdido");
-=======
-				ControllerPersonaje.pelear(p, p1);
-				ControllerPersonaje.sumarContadorMuertes(p);
-				System.out.println(p);
-				}
-			
-			
-		}while(ControllerPartida.comprobarGanador(p));
 
-		
-		System.out.println("Has ganado");
->>>>>>> f101ece78b8ee3ff9a951ee8e991184d91d83473
 
 	}
 
