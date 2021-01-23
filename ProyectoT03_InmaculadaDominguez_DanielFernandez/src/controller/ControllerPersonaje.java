@@ -35,15 +35,15 @@ public class ControllerPersonaje {
 	
 	public static int posicionEnemigos(Personaje p) {
 		
-		int index = 0;
+		int index = 0, tres = 3, cinco = 5, seis = 6, siete = 7, nueve = 9;
 		
-		if (p.getPosI() == 3 && p.getPosJ() == 3) {
+		if (p.getPosI() == tres && p.getPosJ() == tres) {
 			index = 0;
 		}
-		if (p.getPosI() == 3 && p.getPosJ() == 6) {
+		if (p.getPosI() == siete && p.getPosJ() == seis) {
 			index = 1;
 		}
-		if (p.getPosI() == 3 && p.getPosJ() == 9) {
+		if (p.getPosI() == cinco && p.getPosJ() == nueve) {
 			index = 2;
 		}
 		
@@ -74,7 +74,6 @@ public class ControllerPersonaje {
 				
 				b = true;
 				listaEnemigos[i].setActivo(false);
-				return 	b;
 				
 			}
 			

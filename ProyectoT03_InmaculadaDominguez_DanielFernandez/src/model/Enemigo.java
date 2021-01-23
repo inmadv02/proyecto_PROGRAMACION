@@ -72,8 +72,12 @@ public class Enemigo {
 
 	@Override
 	public String toString() {
-		return "Enemigo [nombre=" + nombre + ", vida=" + vida + ", fuerza=" + fuerza + ", posI=" + posI + ", posJ="
-				+ posJ + ", activo=" + activo + "]";
+		return "\t \t \t       _________________________\r\n"
+				+ "\t \t \t      |\t\t\t\t|\r\n"
+				+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
+				+ "\t \t \t      | Vida: " + vida + "\t \t|\r\n"
+				+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
+				+ "\t \t \t      |_________________________|";
 	}
 	
 	

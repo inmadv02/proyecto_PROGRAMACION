@@ -7,8 +7,8 @@ public class DatosEnemigos {
  
 	
 	public static Enemigo e1 = new Enemigo("aaaaaaa",ControllerEnemigo.generarVidaEnemigos(),5,3,3,true,0);
-	public static Enemigo e2 = new Enemigo("bbbbbbb",ControllerEnemigo.generarVidaEnemigos(),10,3,6,true,1);
-	public static Enemigo e3 = new Enemigo("ccccccc",ControllerEnemigo.generarVidaEnemigos(),15,3,9,true,2);
+	public static Enemigo e2 = new Enemigo("bbbbbbb",ControllerEnemigo.generarVidaEnemigos(),20,7,6,true,1);
+	public static Enemigo e3 = new Enemigo("ccccccc",ControllerEnemigo.generarVidaEnemigos(),5,5,9,true,2);
 	
 	public static Enemigo [] listaEnemigos = {e1,e2,e3};
 
