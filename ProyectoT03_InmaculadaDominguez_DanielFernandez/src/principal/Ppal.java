@@ -12,6 +12,7 @@ import datos.DatosMapa;
 import model.Mochila;
 import model.Objetos;
 import datos.DatosObjetos;
+import datos.DatosTasks;
 import vistas.VistasMochila;
 import crud.CrudPersonaje;
 
@@ -28,6 +29,7 @@ public class Ppal {
 		//Objetos [] objetos = new Objetos [DatosObjetos.mascarilla, DatosObjetos.pulverizador, DatosObjetos.gel, DatosObjetos.papel, DatosObjetos.harina, DatosObjetos.mecha];
 		CrudPersonaje crp = new CrudPersonaje();
 		DatosObjetos dob = new DatosObjetos();
+		DatosTasks dtk = new DatosTasks();
 		char a;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
@@ -91,6 +93,7 @@ public class Ppal {
 					VistasMochila.imprimirMochilaUpdate(dob.getObjetos());
 					crp.modificarFuerzayVidaObj(p, dob.getObjetos(), usar);
 					System.out.println(p);
+					VistasHistoria.imprimirTasks(dtk.getTasks());
 					
 				}while(ControllerPartida.comprobarGanador(p));
 					

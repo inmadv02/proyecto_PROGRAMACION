@@ -3,7 +3,9 @@ package vistas;
 import java.util.Random;
 
 import datos.DatosObjetos;
+import datos.DatosMapa;
 import model.Objetos;
+import model.Tasks;
 
 public class VistasHistoria {
 	
@@ -133,33 +135,29 @@ public class VistasHistoria {
 		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
 		System.out.println("\t \t \t     |___________________________|");
 		System.out.println();
-		System.out.println("\t \t \t \t \t   �");
-		System.out.println("\t \t \t \t \t   �");
-		System.out.println("\t \t \t \t \t   �");
-		System.out.println("\t \t \t \t \t   �");
-		System.out.println("\t \t \t \t \t   �");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ·");
 		
 	}
 	
-	public static void imprimirTask (Objetos [] objetos) {
+	public static void imprimirTasks (Tasks [] tasks) {
 		
 		Random r = new Random (System.nanoTime());
-		int hasta = 5;
-		int desde = 3;
+		int hasta = 2;
+		int desde = 0;
 		int ale;
 		
 		ale = r.nextInt(hasta-desde+1)+desde;
 		
+		if(tasks[ale].isActivo() == true) {
+			System.out.println(tasks[ale]);
+		}
 		
-//		if (objetos[ale].isActivo() == true)
-//			
-//		System.out.println();
-//		System.out.println();
-//		System.out.println("\t  _________________________________________");
-//		System.out.println("\t |  \t\t\t\t  |");
-//		System.out.println("\t |   Objetivo: Coger " + objetos[ale].getNombre() + "\t |");
-//		System.out.println("\t |   Pista: ");
-//		
+		
+		
 		
 	}
 

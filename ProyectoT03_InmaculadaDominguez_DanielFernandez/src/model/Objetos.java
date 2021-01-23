@@ -6,6 +6,8 @@ public class Objetos {
 	private int bonusVida;
 	private int bonusFuerza;
 	private boolean activo;
+	private int posI;
+	private int posJ;
 	
 	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo) {
 		super();
@@ -13,6 +15,16 @@ public class Objetos {
 		this.bonusVida = bonusVida;
 		this.bonusFuerza = bonusFuerza;
 		this.activo = activo;
+	}
+
+	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo, int posI, int posJ) {
+		super();
+		this.nombre = nombre;
+		this.bonusVida = bonusVida;
+		this.bonusFuerza = bonusFuerza;
+		this.activo = activo;
+		this.posI = posI;
+		this.posJ = posJ;
 	}
 
 	public Objetos(int bonusVida, int bonusFuerza) {
