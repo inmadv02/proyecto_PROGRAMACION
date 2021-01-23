@@ -6,11 +6,11 @@ import controller.ControllerObjeto;
 public class DatosObjetos {
 	
 	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
-	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
+	public static Objetos pulverizador = new Objetos ("FrufrÃº desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
-	public static Objetos papel = new Objetos ("Papel higiénico", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
+	public static Objetos papel = new Objetos ("Papel higiÃ©nico", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
 	public static Objetos harina = new Objetos ("Harina   ", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
-	public static Objetos mecha = new Objetos ("Carne La Mechá", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
+	public static Objetos mecha = new Objetos ("Carne La Mechï¿½", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false);
 	
 	public static Objetos [] objetos = {mascarilla, pulverizador, gel, papel, harina, mecha};
 	
@@ -105,6 +105,6 @@ public class DatosObjetos {
 	
 //	Objetos [] obj = 
 //		{{"Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza()},
-//		{"Frufrú desinfectante", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza()}};
+//		{"Frufrï¿½ desinfectante", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza()}};
 
 }

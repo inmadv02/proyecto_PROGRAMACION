@@ -40,7 +40,7 @@ public class Ppal {
 		System.out.println("\t \t \t       _________________________");
 		System.out.println("\t \t \t      |\t\t\t\t|");
 		System.out.println("\t \t \t      | [1] Nueva partida       |");
-		System.out.println("\t \t \t      | [2] Cómo jugar          |");
+		System.out.println("\t \t \t      | [2] CÃ³mo jugar          |");
 		System.out.println("\t \t \t      | [0] Salir del juego     |");
 		System.out.println("\t \t \t      |_________________________|");
 		System.out.println();
@@ -84,11 +84,11 @@ public class Ppal {
 					VistasMapa.imprimirMapa(m.getMapa(),p);
 				//}
 				
-					System.out.println("¿Qué objeto quieres usar?");
+					System.out.println("Â¿QuÃ© objeto quieres usar?");
 					VistasMochila.imprimirMochilaInicio(dob.getObjetos());
 					usar = Leer.datoInt();
 					CrudObjetos.borrarObjeto(usar, dob.getObjetos());
-					VistasMochila.imprimirMochilaUpdate(dob.getObjetos(), usar);
+					VistasMochila.imprimirMochilaUpdate(dob.getObjetos());
 					crp.modificarFuerzayVidaObj(p, dob.getObjetos(), usar);
 					System.out.println(p);
 					
@@ -98,13 +98,13 @@ public class Ppal {
 				
 			default:
 				
-				System.out.println("Opción incorrecta. Prueba de nuevo.");
+				System.out.println("OpciÃ³n incorrecta. Prueba de nuevo.");
 			}
 			
 			break;
 			
 		case 2:
-			System.out.println("En mantenimiento. Volver después.");
+			System.out.println("En mantenimiento. Volver despuÃ©s.");
 			
 			break;
 			
@@ -115,7 +115,7 @@ public class Ppal {
 			
 		default:
 			
-			System.out.println("Opción incorrecta. Prueba de nuevo.");
+			System.out.println("OpciÃ³n incorrecta. Prueba de nuevo.");
 		
 		}
 		

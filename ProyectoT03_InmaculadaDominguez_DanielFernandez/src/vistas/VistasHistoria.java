@@ -1,5 +1,7 @@
 package vistas;
 
+import java.util.Random;
+
 import datos.DatosObjetos;
 import model.Objetos;
 
@@ -9,16 +11,16 @@ public class VistasHistoria {
 		
 		System.out.println("\n_________________________________________________________________________________________________________");
 		
-		System.out.println("\n \nBienvenido al año 2020, un año donde la humanidad se ha visto\n"
+		System.out.println("\n \nBienvenido al aï¿½o 2020, un aï¿½o donde la humanidad se ha visto\n"
 				+ "amenazada por un virus nuevo y desconocido: el Coronavirus.");
-		System.out.println("Este patógeno no solo afecta a la salud de las personas, sino que\n"
-				+ "con el paso de los días, la persona contagiada pierde la razón y se vuelve \ntotalmente"
+		System.out.println("Este patï¿½geno no solo afecta a la salud de las personas, sino que\n"
+				+ "con el paso de los dï¿½as, la persona contagiada pierde la razï¿½n y se vuelve \ntotalmente"
 				+ " agresiva contra cualquier ser viviente.");
-		System.out.println("\nComo consecuencia, los humanos se encuentran en una situación prácticamente"
-				+ " \napocalíptica, en la que viven en constante miedo, ya que su día a día se ha \nconvertido en una"
+		System.out.println("\nComo consecuencia, los humanos se encuentran en una situaciï¿½n prï¿½cticamente"
+				+ " \napocalï¿½ptica, en la que viven en constante miedo, ya que su dï¿½a a dï¿½a se ha \nconvertido en una"
 				+ "continua lucha por la supervivencia. ");
-		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la población, así que, "
-				+ "¿por qué no sales afuera para ver qué más puedes conseguir?");
+		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la poblaciï¿½n, asï¿½ que, "
+				+ "ï¿½por quï¿½ no sales afuera para ver quï¿½ mï¿½s puedes conseguir?");
 		System.out.println();
 	
 		
@@ -95,15 +97,15 @@ public class VistasHistoria {
 		System.out.println();
 		System.out.println("\t \t \t  ___________________________________");
 		System.out.println("\t \t \t | \t    \t    \t   \t     |");
-		System.out.println("\t \t \t | M I S I Ó N : ASALTO AL MERCADONA |");
+		System.out.println("\t \t \t | M I S I ï¿½ N : ASALTO AL MERCADONA |");
 		System.out.println("\t \t \t |___________________________________|");
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("Como hemos dicho antes, cualquier OBJETO proporciona ventajas sobre los otros");
 		System.out.println("Por eso, si quieres seguir sobreviviendo, debes hacer una parada en el supermercado\n"
-				+ "más cercano: tu Mercadona de confianza.");
-		System.out.println("Allí tendrás que comprar los siguientes productos: ");
+				+ "mï¿½s cercano: tu Mercadona de confianza.");
+		System.out.println("Allï¿½ tendrï¿½s que comprar los siguientes productos: ");
 		System.out.println();
 		System.out.println();
 		System.out.println("\t \t \t    ______||________||_______||______");
@@ -120,8 +122,8 @@ public class VistasHistoria {
 		System.out.println("\t \t \t   |_________________________________|");
 		System.out.println();	
 		System.out.println();
-		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
-				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
+		System.out.println("Todos los objetos los tendrï¿½s que coger de los pasillos del supermercado\n"
+				+ "y se guardarï¿½n en tu MOCHILA. Solo necesitarï¿½s usar las teclas "
 				+ "W, S, A y D \npara MOVERTE.");
 		System.out.println();
 		System.out.println();
@@ -131,25 +133,33 @@ public class VistasHistoria {
 		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
 		System.out.println("\t \t \t     |___________________________|");
 		System.out.println();
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
+		System.out.println("\t \t \t \t \t   ï¿½");
+		System.out.println("\t \t \t \t \t   ï¿½");
+		System.out.println("\t \t \t \t \t   ï¿½");
+		System.out.println("\t \t \t \t \t   ï¿½");
+		System.out.println("\t \t \t \t \t   ï¿½");
 		
 	}
 	
-	public static void imprimirTasks (Objetos [] objetos) {
+	public static void imprimirTask (Objetos [] objetos) {
+		
+		Random r = new Random (System.nanoTime());
+		int hasta = 5;
+		int desde = 3;
+		int ale;
+		
+		ale = r.nextInt(hasta-desde+1)+desde;
 		
 		
-		//ale = Math.Random()
-		System.out.println();
-		System.out.println();
-		System.out.println("\t  _________________________________________");
-		System.out.println("\t |  \t\t\t\t  |");
-		//System.out.println("\t | \t Objetivo: Coger " + objetos[ale].getNombre() + "\t |");
-		System.out.println("");
-		
+//		if (objetos[ale].isActivo() == true)
+//			
+//		System.out.println();
+//		System.out.println();
+//		System.out.println("\t  _________________________________________");
+//		System.out.println("\t |  \t\t\t\t  |");
+//		System.out.println("\t |   Objetivo: Coger " + objetos[ale].getNombre() + "\t |");
+//		System.out.println("\t |   Pista: ");
+//		
 		
 	}
 
