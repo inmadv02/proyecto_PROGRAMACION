@@ -11,14 +11,11 @@ public class ControllerPartida {
 		
 		if (p.getContadorMuertes() == tres && p.getPosI() ==uno  && p.getPosJ() ==uno ) {
 			
-			b = false;
-			
-			return b;
-			
-		}else {
-			
-			return b;
+			b = false;	
 		}
+			
+			return b;
+		
 			
 	}
 
