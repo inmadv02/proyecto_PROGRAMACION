@@ -1,10 +1,2 @@
-/datos/
-/principal/
-<<<<<<< HEAD
-/vistas/
-=======
-/controller/
-/datos/
 /model/
-/crud/
->>>>>>> c2c40ca42d95fc60a7cdd195540ac8bbd5593033
+/datos/

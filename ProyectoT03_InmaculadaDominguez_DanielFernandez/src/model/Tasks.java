@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Arrays;
+
 import datos.DatosTasks;
 
 public class Tasks {
@@ -44,7 +46,15 @@ public class Tasks {
 
 	public void setActivo(boolean activo) {
 		this.activo = activo;
+	}
+
+
+	@Override
+	public String toString() {
+		return texto ;
 	} 
+	
+	
 	
 	
 	
