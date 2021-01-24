@@ -16,5 +16,6 @@ public class CrudObjetos {
 		objetos[posicion].setActivo(false);
 		
 	}
+	
 
 }

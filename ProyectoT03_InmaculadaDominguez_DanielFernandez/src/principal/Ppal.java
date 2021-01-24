@@ -84,7 +84,8 @@ public class Ppal {
 					a= Leer.datoChar();
 					VistasMapa.moverJugador(p, a);
 					VistasMapa.imprimirMapa(m.getMapa(),p);
-				//}
+					VistasHistoria.imprimirTasks(dtk.getTasks());
+		
 				
 					System.out.println("¿Qué objeto quieres usar?");
 					VistasMochila.imprimirMochilaInicio(dob.getObjetos());
@@ -93,7 +94,7 @@ public class Ppal {
 					VistasMochila.imprimirMochilaUpdate(dob.getObjetos());
 					crp.modificarFuerzayVidaObj(p, dob.getObjetos(), usar);
 					System.out.println(p);
-					VistasHistoria.imprimirTasks(dtk.getTasks());
+					
 					
 				}while(ControllerPartida.comprobarGanador(p));
 					
