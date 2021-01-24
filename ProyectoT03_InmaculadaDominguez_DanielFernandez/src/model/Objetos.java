@@ -69,12 +69,12 @@ public class Objetos {
 
 	@Override
 	public String toString() {
-		return "\t \t \t       _________________________\r\n"
-				+ "\t \t \t      |\t\t\t\t|\r\n"
+		return "\t \t \t       __________________________\r\n"
+				+ "\t \t \t      |\t\t\t\t |\r\n"
 				+ "\t \t \t      | Nombre: " + nombre + "\t |\r\n"
-				+ "\t \t \t      | Vida: " + bonusVida + "\t \t\t|\r\n"
-				+ "\t \t \t      | Fuerza: " + bonusFuerza + "\t |\r\n"
-				+ "\t \t \t      |_________________________|";
+				+ "\t \t \t      | Vida: " + bonusVida + "\t \t\t |\r\n"
+				+ "\t \t \t      | Fuerza: " + bonusFuerza + "\t \t |\r\n"
+				+ "\t \t \t      |__________________________|";
 	}		
 			
 	}
