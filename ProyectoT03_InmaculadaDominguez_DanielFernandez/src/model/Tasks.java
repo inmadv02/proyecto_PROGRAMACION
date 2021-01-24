@@ -7,7 +7,6 @@ import datos.DatosTasks;
 public class Tasks {
 	
 	private String texto;
-	private Tasks [] tasks;
 	private boolean activo;
 	
 	
@@ -29,16 +28,6 @@ public class Tasks {
 	}
 
 
-	public Tasks [] getTasks() {
-		return tasks;
-	}
-
-
-	public void setTasks(Tasks [] tasks) {
-		this.tasks = DatosTasks.tasks;
-	}
-
-
 	public boolean isActivo() {
 		return activo;
 	}
@@ -48,8 +37,6 @@ public class Tasks {
 		this.activo = activo;
 	}
 
-
-	@Override
 	public String toString() {
 		return texto ;
 	} 

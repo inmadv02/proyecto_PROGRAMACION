@@ -5,11 +5,14 @@ import crud.CrudMochila;
 import controller.ControllerPersonaje;
 import crud.CrudObjetos;
 import crud.CrudPersonaje;
+import crud.CrudTasks;
 import datos.DatosEnemigos;
 import datos.DatosMapa;
 import datos.DatosObjetos;
+import datos.DatosTasks;
 import model.Personaje;
 import utilidades.Leer;
+import vistas.VistasHistoria;
 import vistas.VistasMapa;
 import vistas.VistasMochila;
 
@@ -34,6 +37,7 @@ public class PpalPrueba {
 					a= Leer.datoChar();
 					VistasMapa.moverJugador(p, a);
 					VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+					VistasHistoria.imprimirTasks(DatosTasks.getTasks());
 					
 			if(ControllerPersonaje.comprobarPosicion(p, DatosEnemigos.getListaEnemigos())) {
 					
@@ -53,6 +57,8 @@ public class PpalPrueba {
 						System.out.println(p);
 						CrudMochila.ganarObjeto(DatosEnemigos.getListaEnemigos(), DatosObjetos.getObjetos());
 						VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+						CrudTasks.desactivarTasks(DatosTasks.getTasks(), DatosEnemigos.getListaEnemigos());
+						VistasHistoria.imprimirTasks(DatosTasks.getTasks());
 						System.out.println(DatosEnemigos.getListaEnemigos()[index]);
 						System.out.println("Vuelva a introducir movimiento: ");
 							

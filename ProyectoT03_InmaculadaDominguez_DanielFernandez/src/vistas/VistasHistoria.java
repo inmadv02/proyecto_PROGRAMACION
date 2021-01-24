@@ -4,8 +4,10 @@ import java.util.Random;
 
 import datos.DatosObjetos;
 import datos.DatosMapa;
+import model.Enemigo;
 import model.Objetos;
 import model.Tasks;
+import datos.DatosTasks;
 
 public class VistasHistoria {
 	
@@ -13,16 +15,16 @@ public class VistasHistoria {
 		
 		System.out.println("\n_________________________________________________________________________________________________________");
 		
-		System.out.println("\n \nBienvenido al a�o 2020, un a�o donde la humanidad se ha visto\n"
+		System.out.println("\n \nBienvenido al año 2020, un año donde la humanidad se ha visto\n"
 				+ "amenazada por un virus nuevo y desconocido: el Coronavirus.");
 		System.out.println("Este pat�geno no solo afecta a la salud de las personas, sino que\n"
 				+ "con el paso de los d�as, la persona contagiada pierde la raz�n y se vuelve \ntotalmente"
 				+ " agresiva contra cualquier ser viviente.");
-		System.out.println("\nComo consecuencia, los humanos se encuentran en una situaci�n pr�cticamente"
-				+ " \napocal�ptica, en la que viven en constante miedo, ya que su d�a a d�a se ha \nconvertido en una"
+		System.out.println("\nComo consecuencia, los humanos se encuentran en una situación prácticamente"
+				+ " \napocalíptica, en la que viven en constante miedo, ya que su día a día se ha \nconvertido en una"
 				+ "continua lucha por la supervivencia. ");
 		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la poblaci�n, as� que, "
-				+ "�por qu� no sales afuera para ver qu� m�s puedes conseguir?");
+				+ "por qué no sales afuera para ver qué más puedes conseguir?");
 		System.out.println();
 	
 		
@@ -145,18 +147,14 @@ public class VistasHistoria {
 	
 	public static void imprimirTasks (Tasks [] tasks) {
 		
-		Random r = new Random (System.nanoTime());
-		int hasta = 2;
-		int desde = 0;
-		int ale;
+		for (int i = 0; i < tasks.length; i++) {
+			
+			if(tasks[i].isActivo() == true) {
+				System.out.println(tasks[i]);
+			
+			}
 		
-		ale = r.nextInt(hasta-desde+1)+desde;
-		
-		if(tasks[ale].isActivo() == true) {
-			System.out.println(tasks[ale]);
 		}
-		
-		
 		
 		
 	}
