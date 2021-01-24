@@ -44,6 +44,7 @@ public class VistasMochila {
 			if (objetos[i].isActivo() == true) {
 				
 				contador++;
+				
 			
 			System.out.println("\t \t|| ["+ contador +"] " + objetos[i].getNombre()+ "\t  \t " 
 			+ objetos[i].getBonusVida() + "\t \t   " + objetos[i].getBonusFuerza() + " \t    ||");

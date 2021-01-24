@@ -2,6 +2,8 @@ package datos;
 
 import controller.ControllerEnemigo;
 import model.Enemigo;
+import datos.DatosObjetos;
+import model.Objetos;
 
 public class DatosEnemigos {
  

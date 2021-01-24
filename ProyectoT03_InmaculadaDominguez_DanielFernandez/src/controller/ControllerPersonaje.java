@@ -53,7 +53,8 @@ public class ControllerPersonaje {
 	
 	public static void pelear(Personaje p ,Enemigo[]listaEnemigos, int index) {
 			
-			p.setVida(p.getVida()-listaEnemigos[index].getFuerza());	
+			p.setVida(p.getVida()-listaEnemigos[index].getFuerza());
+			listaEnemigos[index].setVida(listaEnemigos[index].getVida()-p.getFuerza());
 			
 	}
 	

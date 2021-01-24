@@ -1,5 +1,8 @@
 package model;
 
+import datos.DatosObjetos;
+import model.Objetos;
+
 public class Enemigo {
 	
 	private String nombre;
@@ -9,6 +12,7 @@ public class Enemigo {
 	private int posJ;
 	private boolean activo;
 	private int posicionArray;
+	
 	
 	
 	public Enemigo(String nombre, int vida, int fuerza, int posI, int posJ, boolean activo, int posicionArray) {
@@ -21,6 +25,7 @@ public class Enemigo {
 		this.activo = activo;
 		this.posicionArray = posicionArray;
 	}
+	
 
 	public String getNombre() {
 		return nombre;

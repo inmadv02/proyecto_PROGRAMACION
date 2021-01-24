@@ -1,6 +1,7 @@
 package principal;
 
 import controller.ControllerPartida;
+import crud.CrudMochila;
 import controller.ControllerPersonaje;
 import crud.CrudObjetos;
 import crud.CrudPersonaje;
@@ -50,6 +51,9 @@ public class PpalPrueba {
 						ControllerPersonaje.pelear(p, DatosEnemigos.getListaEnemigos(),index);
 						ControllerPersonaje.sumarContadorMuertes(p);
 						System.out.println(p);
+						CrudMochila.ganarObjeto(DatosEnemigos.getListaEnemigos(), DatosObjetos.getObjetos());
+						VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+						System.out.println(DatosEnemigos.getListaEnemigos()[index]);
 						System.out.println("Vuelva a introducir movimiento: ");
 							
 						break;
@@ -57,7 +61,7 @@ public class PpalPrueba {
 					case 2:
 							
 						System.out.println("Elige el objeto que quieras");
-						VistasMochila.imprimirMochilaInicio(DatosObjetos.getObjetos());
+						VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 						usar = Leer.datoInt();
 						CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
 						VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
