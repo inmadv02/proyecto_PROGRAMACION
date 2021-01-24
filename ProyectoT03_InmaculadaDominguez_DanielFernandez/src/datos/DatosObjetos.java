@@ -9,10 +9,10 @@ public class DatosObjetos {
 	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
 	public static Objetos papel = new Objetos ("Papel higiénico", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 3, 3);
-	public static Objetos harina = new Objetos ("Harina   ", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 7, 6);
-	public static Objetos mecha = new Objetos ("Carne La Mechá", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 5, 9);
+	public static Objetos mecha = new Objetos ("Carne La Mechá", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 7, 6);
+	public static Objetos harina = new Objetos ("Harina   ", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 5, 9);
 	
-	public static Objetos [] objetos = {mascarilla, pulverizador, gel, papel, harina, mecha};
+	public static Objetos [] objetos = {mascarilla, pulverizador, gel, papel, mecha, harina};
 	
 	public static Objetos getMascarilla() {
 		return mascarilla;

@@ -12,10 +12,11 @@ public class Enemigo {
 	private int posJ;
 	private boolean activo;
 	private int posicionArray;
+	private String ataque;
+	private Objetos objeto;
 	
-	
-	
-	public Enemigo(String nombre, int vida, int fuerza, int posI, int posJ, boolean activo, int posicionArray) {
+	public Enemigo(String nombre, int vida, int fuerza, int posI, int posJ, boolean activo, int posicionArray,
+			String ataque, Objetos objeto) {
 		super();
 		this.nombre = nombre;
 		this.vida = vida;
@@ -24,8 +25,9 @@ public class Enemigo {
 		this.posJ = posJ;
 		this.activo = activo;
 		this.posicionArray = posicionArray;
+		this.ataque = ataque;
+		this.objeto = objeto;
 	}
-	
 
 	public String getNombre() {
 		return nombre;
@@ -73,6 +75,30 @@ public class Enemigo {
 
 	public void setActivo(boolean activo) {
 		this.activo = activo;
+	}
+
+	public int getPosicionArray() {
+		return posicionArray;
+	}
+
+	public void setPosicionArray(int posicionArray) {
+		this.posicionArray = posicionArray;
+	}
+
+	public String getAtaque() {
+		return ataque;
+	}
+
+	public void setAtaque(String ataque) {
+		this.ataque = ataque;
+	}
+
+	public Objetos getObjeto() {
+		return objeto;
+	}
+
+	public void setObjeto(Objetos objeto) {
+		this.objeto = objeto;
 	}
 
 	@Override

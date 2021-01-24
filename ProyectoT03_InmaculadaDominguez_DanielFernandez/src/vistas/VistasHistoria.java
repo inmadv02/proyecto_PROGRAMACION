@@ -17,13 +17,13 @@ public class VistasHistoria {
 		
 		System.out.println("\n \nBienvenido al año 2020, un año donde la humanidad se ha visto\n"
 				+ "amenazada por un virus nuevo y desconocido: el Coronavirus.");
-		System.out.println("Este pat�geno no solo afecta a la salud de las personas, sino que\n"
-				+ "con el paso de los d�as, la persona contagiada pierde la raz�n y se vuelve \ntotalmente"
+		System.out.println("Este patógeno no solo afecta a la salud de las personas, sino que\n"
+				+ "con el paso de los días, la persona contagiada pierde la razón y se vuelve \ntotalmente"
 				+ " agresiva contra cualquier ser viviente.");
 		System.out.println("\nComo consecuencia, los humanos se encuentran en una situación prácticamente"
 				+ " \napocalíptica, en la que viven en constante miedo, ya que su día a día se ha \nconvertido en una"
 				+ "continua lucha por la supervivencia. ");
-		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la poblaci�n, as� que, "
+		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la población, así que, "
 				+ "por qué no sales afuera para ver qué más puedes conseguir?");
 		System.out.println();
 	
@@ -101,15 +101,15 @@ public class VistasHistoria {
 		System.out.println();
 		System.out.println("\t \t \t  ___________________________________");
 		System.out.println("\t \t \t | \t    \t    \t   \t     |");
-		System.out.println("\t \t \t | M I S I � N : ASALTO AL MERCADONA |");
+		System.out.println("\t \t \t | M I S I Ó N : ASALTO AL MERCADONA |");
 		System.out.println("\t \t \t |___________________________________|");
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("Como hemos dicho antes, cualquier OBJETO proporciona ventajas sobre los otros");
 		System.out.println("Por eso, si quieres seguir sobreviviendo, debes hacer una parada en el supermercado\n"
-				+ "m�s cercano: tu Mercadona de confianza.");
-		System.out.println("All� tendr�s que comprar los siguientes productos: ");
+				+ "más cercano: tu Mercadona de confianza.");
+		System.out.println("Allí tendrás que comprar los siguientes productos: ");
 		System.out.println();
 		System.out.println();
 		System.out.println("\t \t \t    ______||________||_______||______");
@@ -126,8 +126,8 @@ public class VistasHistoria {
 		System.out.println("\t \t \t   |_________________________________|");
 		System.out.println();	
 		System.out.println();
-		System.out.println("Todos los objetos los tendr�s que coger de los pasillos del supermercado\n"
-				+ "y se guardar�n en tu MOCHILA. Solo necesitar�s usar las teclas "
+		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
+				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
 				+ "W, S, A y D \npara MOVERTE.");
 		System.out.println();
 		System.out.println();
