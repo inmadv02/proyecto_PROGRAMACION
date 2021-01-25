@@ -11,6 +11,35 @@ import datos.DatosTasks;
 
 public class VistasHistoria {
 	
+	public static void imprimirInstrucciones() {
+		
+		System.out.println("\t I N S T R U C C I O N E S");
+		System.out.println();
+		System.out.println();
+		System.out.println("Solo necesitarás usar las teclas W, S, A y D \npara MOVERTE.");
+		System.out.println();
+		System.out.println();
+		System.out.println("\t \t \t      ___________________________");
+		System.out.println("\t \t \t     | \t\t\t\t |");
+		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
+		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
+		System.out.println("\t \t \t     |___________________________|");
+		
+		System.out.println("Mientras te mueves por el mapa, encontrarás enemigos por los pasillos.\n"
+				+ "Tendrás que vencer, y a cambio conseguirás los objetos que se te piden\n en la"
+				+ "introducción. Todos los objetos se guardarán en tu MOCHILA y podrás\n usarlos en"
+				+ "las peleas.");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("Además, debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
+				+ "recibir MÁS DE UN GOLPE. Eso dependerá del daño que hagas y la vida del enemigo.\n"
+				+ "IMPORTANTE: para GANAR la partida deberás conseguir los 3 objetos y volver a la caja\n"
+				+ "para pagar. La caja es la posición inicial donde parte el personaje(1,1).\nBuena suerte.");
+	
+		
+	}
+	
 	public static void imprimirIntro () {
 		
 		System.out.println("\n_________________________________________________________________________________________________________");
@@ -193,6 +222,24 @@ public class VistasHistoria {
 	
 	}
 	
+	public static void imprimirAccionObjeto(int usar, int uno, int cero, int dos, Objetos [] objetos) {
+		
+		if(usar-uno == cero) {
+			System.out.println("Le has tirado la mascarilla a la cara del enemigo, haciendo que retroceda\n"
+					+ "y se vaya corriendo, pues cree que lo acabas de infectar con la mascarilla sucia.");
+		}
+		
+		if(usar-uno == uno) {
+			System.out.println("Le has echado el líquido del frufrú al enemigo en los ojos, haciendo que\n"
+					+ "no pueda ver durante un rato.");
+		}
+		if(usar-uno == dos) {
+			System.out.println("Con el gel, el enemigo se ha quedado pegado a sí mismo al intentar quitárselo\n"
+					+ "de las manos y ya no puede seguir persiguiéndote.");
+		}
+		
+	}
+	
 	public static void imprimirDerrota () {
 		System.out.println();
 		System.out.println();
@@ -255,27 +302,6 @@ public class VistasHistoria {
 				+ "                \\/        \\/             \\/         \\/        \\/");
 	}
 	
-	public static void imprimirInstrucciones() {
-		
-		
-		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
-				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
-				+ "W, S, A y D \npara MOVERTE.");
-		System.out.println();
-		System.out.println();
-		System.out.println("\t \t \t      ___________________________");
-		System.out.println("\t \t \t     | \t\t\t\t |");
-		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
-		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
-		System.out.println("\t \t \t     |___________________________|");
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println("Además debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
-				+ "recivir MÁS DE UN GOLPE ,eso dependerá del daño que hagas y la vida del enemigo.\n"
-				+ "IMPORTANTE: para GANAR la partida deberás conseguir 3 objetos y volver a la caja\n"
-				+ "para pagar,la caja es la posición inicial donde parte el personaje(1,1).\nBuena suerte.");
 	
-		
-	}
+	
 }
