@@ -35,7 +35,7 @@ public class ControllerPersonaje {
 	
 	public static int posicionEnemigos(Personaje p) {
 		
-		int index = 0, tres = 3, cinco = 5, seis = 6, siete = 7, nueve = 9;
+		int index = 0, tres = 3, cinco = 5, seis = 6, siete = 7, ocho = 8;
 		
 		if (p.getPosI() == tres && p.getPosJ() == tres) {
 			index = 0;
@@ -43,7 +43,7 @@ public class ControllerPersonaje {
 		if (p.getPosI() == siete && p.getPosJ() == seis) {
 			index = 1;
 		}
-		if (p.getPosI() == cinco && p.getPosJ() == nueve) {
+		if (p.getPosI() == cinco && p.getPosJ() == ocho) {
 			index = 2;
 		}
 		

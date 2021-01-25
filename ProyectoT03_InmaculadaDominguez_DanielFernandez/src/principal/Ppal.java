@@ -24,10 +24,10 @@ public class Ppal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op, op2, cero = 0, usar;
+		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1;
 		char nombreJ;
 		Personaje p;
-		int vida = 30, fuerza = 30,index = 0, opPelea;
+		int vida = 40, fuerza = 30,index = 0, opPelea;
 		DatosMapa m = new DatosMapa();
 		//Objetos [] objetos = new Objetos [DatosObjetos.mascarilla, DatosObjetos.pulverizador, DatosObjetos.gel, DatosObjetos.papel, DatosObjetos.harina, DatosObjetos.mecha];
 		CrudPersonaje crp = new CrudPersonaje();
@@ -60,7 +60,7 @@ public class Ppal {
 			nombreJ = Leer.datoChar();
 
 			
-			p = new Personaje (nombreJ, 10, 30, 1, 1,0);
+			p = new Personaje (nombreJ, vida, fuerza, uno, uno, cero);
 				
 				VistasHistoria.imprimirPantallaCarga();
 				System.out.println("Pulse enter para continuar.");
@@ -68,10 +68,8 @@ public class Ppal {
 				VistasHistoria.imprimirMisionInicio(dob.objetos);
 				System.out.println("Pulse enter para continuar.");
 				enter = Leer.datoChar();
+				System.out.println();
 				System.out.println(p);
-				System.out.println();
-				System.out.println();
-				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 				System.out.println();
 				System.out.println();
 				System.out.println("Acabas de entrar en Mercadona. Debido a la situación caótica que te rodea,\n"
@@ -84,7 +82,11 @@ public class Ppal {
 				System.out.println("Que la fuerza te acompañe.");
 				System.out.println();
 				System.out.println();
+				System.out.println();
+				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
+				System.out.println();
 				System.out.println("Introduce algún movimiento:");
+				
 				
 				while(ControllerPartida.comprobarGanador(p) && ControllerPersonaje.comprobarVidaJugador(p)) {
 					
@@ -96,11 +98,20 @@ public class Ppal {
 					
 						index = ControllerPersonaje.posicionEnemigos(p);
 						System.out.println();
-						System.out.println("Al entrar en el pasillo, te has encontrado con "+DatosEnemigos.getListaEnemigos()[index].getNombre());
+						System.out.println();
+						System.out.println("Al entrar en el pasillo, te has encontrado con "+DatosEnemigos.getListaEnemigos()[index].getNombre() +  ".");
 						System.out.println(DatosEnemigos.getListaEnemigos()[index]);
+						System.out.println();
+						System.out.println();
 						VistasHistoria.imprimirAccionEnemigo(index);
-						System.out.println("¿Qué des lo que quieres hacer?");
+						System.out.println();
+						
+					do {
+						
+						System.out.println("¿Qué es lo que quieres hacer?");
 						System.out.println("1.-Pelear.\n2.-Usar objeto.");
+						System.out.println();
+						System.out.println(p);
 						opPelea = Leer.datoInt();
 						
 						
@@ -110,23 +121,37 @@ public class Ppal {
 									
 								System.out.println("Parece que ha usado el ataque "+ DatosEnemigos.getListaEnemigos()[index].getAtaque());
 								
-								while(DatosEnemigos.getListaEnemigos()[index].getVida() >= 0) {
+								while(DatosEnemigos.getListaEnemigos()[index].getVida() >= cero) {
 									
 									ControllerPersonaje.pelear(p, DatosEnemigos.getListaEnemigos(),index);
-									System.out.println("Te ha quitado "+DatosEnemigos.getListaEnemigos()[index].getFuerza()+ " de vida.");
+									contadorPelea++;
+									
 								}
+								
+								System.out.println("Te ha quitado "+DatosEnemigos.getListaEnemigos()[index].getFuerza() * contadorPelea+ " de vida.");
+								contadorPelea = cero;
 								
 								if (ControllerPersonaje.comprobarVidaJugador(p)) {
 									
+									System.out.println();
+									VistasHistoria.imprimirAccionPersonaje(index);
 									ControllerPersonaje.sumarContadorMuertes(p);
+									System.out.println();
 									System.out.println(p);
-									System.out.println("Has ganado la pelea y has conseguido \n"+ DatosEnemigos.getListaEnemigos()[index].getObjeto());
+									System.out.println();
+									System.out.println("Has ganado la pelea y has conseguido: \n \n"+ DatosEnemigos.getListaEnemigos()[index].getObjeto());
 									CrudMochila.ganarObjeto(DatosEnemigos.getListaEnemigos(), DatosObjetos.getObjetos());
 									VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+									System.out.println();
+									System.out.println();
 									System.out.println("Te quedan todavía estas tareas: ");
+									System.out.println();
 									CrudTasks.desactivarTasks(DatosTasks.getTasks(), DatosEnemigos.getListaEnemigos());
 									VistasHistoria.imprimirTasks(DatosTasks.getTasks());
-									System.out.println("Vuelva a introducir movimiento: ");
+									System.out.println();
+									System.out.println();
+									System.out.println("Vuelve a introducir movimiento: ");
+									System.out.println();
 								}
 								
 									
@@ -134,35 +159,59 @@ public class Ppal {
 									
 							case 2:
 									
-								System.out.println("Elige el objeto que quieras");
+								System.out.println("Elige el objeto que quieras.");
+								System.out.println("Una vez hayas usado un objeto de la mochila, pelearás automáticamente.");
 								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 								usar = Leer.datoInt();
 								CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
 								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 								CrudPersonaje.modificarFuerzayVidaObj(p,DatosObjetos.getObjetos(),usar);
-								System.out.println("vida actualizada :"+p);
-								
-								ControllerPersonaje.pelear(p, DatosEnemigos.getListaEnemigos(),index);
-								ControllerPersonaje.sumarContadorMuertes(p);
+								System.out.println();
+								System.out.println("Has usado\n \n" + DatosObjetos.getObjetos()[usar-uno].getNombre());
+								System.out.println();
 								System.out.println(p);
-								System.out.println("Vuelva a introducir movimiento: ");
+								System.out.println();
+								System.out.println("--Este objeto no volverá a aparecer en la mochila--");
+								
+								
 								break;
 									
 							default:
-								System.out.println("dakjdfbsd");
+								System.out.println("Opción incorrecta. Vuelve a intentarlo.");
 								break;
 								
 						}
+						
+					}while(opPelea != uno);
 				}
 			}
 				
 			if(ControllerPartida.comprobarGanador(p)) {
 				
-				System.out.println("Has perdido");
+				VistasHistoria.imprimirDerrota();
 				
 			}else {
 			
-				System.out.println("Has ganado");
+				VistasHistoria.imprimirFinalAlternativo();
+				op2 = Leer.datoInt();
+				
+				switch(op2) {
+				
+					case 1:
+						VistasHistoria.imprimirFinalAlternativo1();
+						VistasHistoria.imprimirFin();
+						break;
+						
+					case 2:
+						VistasHistoria.imprimirFinalAlternativo2();
+						VistasHistoria.imprimirFin();
+						break;
+						
+					default:
+						System.out.println("Opción incorrecta. Inténtalo de nuevo.");
+						break;
+				}
+				
 			}
 
 					

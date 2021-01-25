@@ -162,17 +162,112 @@ public class VistasHistoria {
 		int cero = 0, uno = 1, dos = 2;
 		
 		if(index  == cero) {
-			System.out.println("aaaaa");
+			System.out.println("Con todo el lío del Coronavirus, ya nadie se detiene unos segundos\n"
+					+ "para que Antonio le pueda hacer publicidad de la pescadería. Sin embargo,\neso no"
+					+ " hace que se rinda. Por ello, cuando te ha visto, no ha dudado \nen correr "
+					+ "hacia ti.");
 		}
 		
 		if(index  == uno) {
-			System.out.println("bbbbb");
+			System.out.println("Las personas mayores también quieren sobrevivir a esta pandemia; \n"
+					+ "pero claro la edad los limita, así que ha estado esperando a que \napareciera"
+					+ " alguien para pedirle que le coja la lata de sardinas\nque está en la última "
+					+ "balda, que ella no llega.");
+			System.out.println();
+			System.out.println("Tú te niegas a ser su víctima, porque el tiempo apremia y decides\n"
+					+ "seguir buscando lo que necesitas. A la señora mayor no le sienta\nnada bien,"
+					+ "así que decide acercarse con su andador para enseñarte\nque debes respetar"
+					+ "a tus mayores.");
 		}
 		
 		if(index  == dos) {
-			System.out.println("ccccc");
+			System.out.println("Estaba limpiando el suelo, y parece que no se ha puesto muy contenta\n"
+					+ "al verte llegar con los zapatos llenos de barro.");
+			System.out.println("Ves que se acerca ti con actitud hostil y la fregona en mano.");
 		}
 	
 	}
-
+	
+	public static void imprimirAccionPersonaje (int index) {
+		
+		int cero = 0, uno = 1, dos = 2;
+		
+		if(index  == cero) {
+			System.out.println("No obstante, tú has contratacado con un estornudo y lo has podido ahuyentar.");
+			System.out.println("Ahora puedes coger el papel higiénico.");
+		}
+		
+		if(index  == uno) {
+			System.out.println("Como no quieres oír más discursos, le pides que te deje el andador para poder\n"
+					+ "llegar a la última balda y coger la lata de atún junto con la carne mechá.");
+		}
+		
+		if(index  == dos) {
+			System.out.println("No quieres perder más tiempo, así que le quitas la fregona, limpias lo que\n"
+					+ "has ensuciado y consigues que te deje coger la harina.");
+		}
+	
+	}
+	
+	public static void imprimirDerrota () {
+		System.out.println();
+		System.out.println();
+		System.out.println("  ________                        ________                     \r\n"
+				+ " /  _____/_____    _____   ____   \\_____  \\___  __ ___________ \r\n"
+				+ "/   \\  ___\\__  \\  /     \\_/ __ \\   /   |   \\  \\/ // __ \\_  __ \\\r\n"
+				+ "\\    \\_\\  \\/ __ \\|  Y Y  \\  ___/  /    |    \\   /\\  ___/|  | \\/\r\n"
+				+ " \\______  (____  /__|_|  /\\___  > \\_______  /\\_/  \\___  >__|   \r\n"
+				+ "        \\/     \\/      \\/     \\/          \\/          \\/       ");
+	}
+	
+	public static void imprimirFinalAlternativo () {
+		
+		System.out.println("Ya has conseguido los tres objetos que necesitabas y ya has pagado rápidamente\n"
+				+ "en caja, así que decides irte.");
+		System.out.println();
+		System.out.println("Sin embargo, cuando empiezas a caminar hacia la puerta, escuchas que un hombre\n"
+				+ "infectado entra por una de las puertas laterales, y va hacia el cajero, dispuesto a\n"
+				+ "contagiarle.");
+		System.out.println();
+		System.out.println("¿Qué haces?");
+		System.out.println("1. Ayudar al cajero.");
+		System.out.println("2. Esto no va contigo. No quieres arriesgarte y prefieres irte a casa.");
+	}
+	
+	public static void imprimirFinalAlternativo1 () {
+		
+		System.out.println("Decides ayudar al cajero.");
+		System.out.println();
+		System.out.println("Corres hacia el contagiado con un estintor para defenderte, pero en el forcejeo,\n"
+				+ "tu enemigo te muerde en el brazo.");
+		System.out.println();
+		System.out.println("Encima, tus objetos se han caído al suelo y han quedado inservibles.");
+		System.out.println();
+		System.out.println("Para colmo, el cajero te ha utilizado como distracción para salir de allí.");
+		System.out.println();
+		System.out.println("Una vez que te ha mordido, consigues deshacerte del hombre, pero ya es demasiado\n"
+				+ "tarde porque te ha infectado.");
+		
+	}
+	
+	public static void imprimirFinalAlternativo2 () {
+		
+		System.out.println("Huyes de Mercadona sin mirar atrás. No te puedes arriesgar a contagiarte después\n"
+				+ "de todo por lo que has pasado. Por el camino consigues esconderte de los infectados que vas\n"
+				+ "encontrando y finalmente llegas sano y salvo a casa.");
+		System.out.println();
+		System.out.println("No obstante, sabes que te debes seguir manteniendo alerta, porque aún te queda\n"
+				+ "sobrevivir al 2020");
+		
+	}
+	
+	public static void imprimirFin () {
+		
+		System.out.println("______________ ______________    ___________ _______  ________   \r\n"
+				+ "\\__    ___/   |   \\_   _____/    \\_   _____/ \\      \\ \\______ \\  \r\n"
+				+ "  |    | /    ~    \\    __)_      |    __)_  /   |   \\ |    |  \\ \r\n"
+				+ "  |    | \\    Y    /        \\     |        \\/    |    \\|    `   \\\r\n"
+				+ "  |____|  \\___|_  /_______  /    /_______  /\\____|__  /_______  /\r\n"
+				+ "                \\/        \\/             \\/         \\/        \\/");
+	}
 }
