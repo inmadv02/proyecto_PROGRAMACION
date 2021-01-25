@@ -2,7 +2,7 @@ package vistas;
 
 public class VistasTitulo {
 	
-	public static void imprimirTitulo () {
+	public void imprimirTitulo () {
 		
 		System.out.println("\r\n"
 				+ "\t  ________                                    __  .__               \r\n"
