@@ -39,7 +39,9 @@ public class Ppal {
 
 		VistasTitulo.imprimirTitulo();
 		
-		
+//		do {
+//			
+//		ControllerPartida.actualizarPartida(DatosMapa.getMapaSinActualizar(), DatosEnemigos.getListaEnemigosNueva(), DatosTasks.getTasks(), DatosObjetos.getObjetos());
 		System.out.println();	
 		System.out.println("\t \t \t       _________________________");
 		System.out.println("\t \t \t      |\t\t\t\t|");
@@ -49,6 +51,7 @@ public class Ppal {
 		System.out.println("\t \t \t      |_________________________|");
 		System.out.println();
 		op = Leer.datoInt();
+		
 		
 		switch (op) {
 		
@@ -163,6 +166,8 @@ public class Ppal {
 			System.out.println("Opción incorrecta. Prueba de nuevo.");
 		
 		}
+		
+//	}while(op!=0);
 		
 		
 

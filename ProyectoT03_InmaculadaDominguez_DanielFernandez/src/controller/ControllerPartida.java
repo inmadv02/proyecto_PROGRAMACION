@@ -1,6 +1,12 @@
 package controller;
 
+import datos.DatosEnemigos;
+import datos.DatosMapa;
+import datos.DatosObjetos;
+import model.Enemigo;
+import model.Objetos;
 import model.Personaje;
+import model.Tasks;
 
 public class ControllerPartida {
 	
@@ -17,6 +23,21 @@ public class ControllerPartida {
 			return b;
 		
 			
+	}
+	
+	public static void actualizarPartida(char [][]mapaNuevo, Enemigo[]listaEnemigos, Tasks[]listaTareas,Objetos[]listaObjetos) {
+		
+		DatosMapa.setMapa(mapaNuevo);
+		DatosEnemigos.setListaEnemigos(listaEnemigos);
+		DatosObjetos.setObjetos(listaObjetos);
+		
+		for (int i = 0; i < listaTareas.length; i++) {
+			
+			listaTareas[i].setActivo(true);
+		}
+		
+		
+		
 	}
 
 }
