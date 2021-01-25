@@ -117,11 +117,9 @@ public class VistasHistoria {
 		System.out.println("\t \t \t   |\t\t\t \t     |");
 		System.out.println("\t \t \t   |     L I S T A   C O M P R A     |");
 		System.out.println("\t \t \t   |   \t\t\t\t     |");
-		//for (int i = 3; i < objetos.length; i++) {
 		System.out.println("\t \t \t   | \t     " + objetos[3].getNombre() + "\t     |" );
-		System.out.println("\t \t \t   |\t \t " + objetos[4].getNombre() + "\t     |" );
-		System.out.println("\t \t \t   | \t     " + objetos[5].getNombre() + "\t     |" );
-		//}
+		System.out.println("\t \t \t   |\t     " + objetos[4].getNombre() + "\t     |" );
+		System.out.println("\t \t \t   | \t \t " + objetos[5].getNombre() + "\t     |" );
 		System.out.println("\t \t \t   | \t\t\t\t     |");
 		System.out.println("\t \t \t   |_________________________________|");
 		System.out.println();	

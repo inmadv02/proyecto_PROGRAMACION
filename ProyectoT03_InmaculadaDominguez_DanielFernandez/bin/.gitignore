@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 /principal/
 /controller/
 /datos/
+=======
+/controller/
+/crud/
+/datos/
+/model/
+/principal/
+/utilidades/
+/vistas/
+>>>>>>> 8255c62d3203328b96ab2248dfb04fdd163fc20b
