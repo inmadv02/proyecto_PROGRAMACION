@@ -103,6 +103,15 @@ public class Enemigo {
 
 	@Override
 	public String toString() {
+		if(posicionArray == 0) {
+			return  "\t \t \t       ____________________________________\r\n"
+					+ "\t \t \t      |\t\t\t\t\t   |\r\n"
+					+ "\t \t \t      | Nombre: " + nombre + "   |\r\n"
+					+ "\t \t \t      | Vida: " + vida + "\t\t\t   |\r\n"
+					+ "\t \t \t      | Fuerza: " + fuerza + "\t \t\t   |\r\n"
+					+ "\t \t \t      |____________________________________|";
+
+		}else
 		return "\t \t \t       _________________________\r\n"
 				+ "\t \t \t      |\t\t\t\t|\r\n"
 				+ "\t \t \t      | Nombre: " + nombre + "\t|\r\n"

@@ -33,15 +33,13 @@ public class Ppal {
 		CrudPersonaje crp = new CrudPersonaje();
 		DatosObjetos dob = new DatosObjetos();
 		DatosTasks dtk = new DatosTasks();
-		char a;
+		char a, enter;
 
 		Mochila mc = new Mochila (datos.DatosObjetos.getObjetos());
 
 		VistasTitulo.imprimirTitulo();
 		
-//		do {
-//			
-//		ControllerPartida.actualizarPartida(DatosMapa.getMapaSinActualizar(), DatosEnemigos.getListaEnemigosNueva(), DatosTasks.getTasks(), DatosObjetos.getObjetos());
+		
 		System.out.println();	
 		System.out.println("\t \t \t       _________________________");
 		System.out.println("\t \t \t      |\t\t\t\t|");
@@ -51,7 +49,6 @@ public class Ppal {
 		System.out.println("\t \t \t      |_________________________|");
 		System.out.println();
 		op = Leer.datoInt();
-		
 		
 		switch (op) {
 		
@@ -66,12 +63,28 @@ public class Ppal {
 			p = new Personaje (nombreJ, 10, 30, 1, 1,0);
 				
 				VistasHistoria.imprimirPantallaCarga();
+				System.out.println("Pulse enter para continuar.");
+				enter = Leer.datoChar();
 				VistasHistoria.imprimirMisionInicio(dob.objetos);
+				System.out.println("Pulse enter para continuar.");
+				enter = Leer.datoChar();
 				System.out.println(p);
 				System.out.println();
-				VistasHistoria.imprimirTasks(DatosTasks.getTasks());
+				System.out.println();
 				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
-				
+				System.out.println();
+				System.out.println();
+				System.out.println("Acabas de entrar en Mercadona. Debido a la situación caótica que te rodea,\n"
+						+ "todo está desordenado. Tienes poco tiempo para comprar antes de que llegue\nalguna "
+						+ "persona infectada.");
+				System.out.println("Por eso, te hemos facilitado las tareas que debes completar:");
+				System.out.println();
+				VistasHistoria.imprimirTasks(DatosTasks.getTasks());
+				System.out.println();
+				System.out.println("Que la fuerza te acompañe.");
+				System.out.println();
+				System.out.println();
+				System.out.println("Introduce algún movimiento:");
 				
 				while(ControllerPartida.comprobarGanador(p) && ControllerPersonaje.comprobarVidaJugador(p)) {
 					
@@ -82,10 +95,14 @@ public class Ppal {
 					if(ControllerPersonaje.comprobarPosicion(p, DatosEnemigos.getListaEnemigos())) {
 					
 						index = ControllerPersonaje.posicionEnemigos(p);
-						System.out.println("Te has encontrado con "+DatosEnemigos.getListaEnemigos()[index].getNombre());
+						System.out.println();
+						System.out.println("Al entrar en el pasillo, te has encontrado con "+DatosEnemigos.getListaEnemigos()[index].getNombre());
 						System.out.println(DatosEnemigos.getListaEnemigos()[index]);
+						VistasHistoria.imprimirAccionEnemigo(index);
+						System.out.println("¿Qué des lo que quieres hacer?");
 						System.out.println("1.-Pelear.\n2.-Usar objeto.");
 						opPelea = Leer.datoInt();
+						
 						
 						switch (opPelea) {
 							

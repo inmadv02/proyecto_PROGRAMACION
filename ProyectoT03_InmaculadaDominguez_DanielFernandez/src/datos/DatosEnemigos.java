@@ -8,7 +8,7 @@ import model.Objetos;
 public class DatosEnemigos {
  
 	
-	public static Enemigo e1 = new Enemigo("Antonio Recio", ControllerEnemigo.generarVidaEnemigos(),5,3,3,true,0,"Soy mayorista, no limpio pescao'.",DatosObjetos.getPapel());
+	public static Enemigo e1 = new Enemigo("Antonio Recio, pescadero", ControllerEnemigo.generarVidaEnemigos(),5,3,3,true,0,"Soy mayorista, no limpio pescao'.",DatosObjetos.getPapel());
 	public static Enemigo e2 = new Enemigo("Señora mayor",ControllerEnemigo.generarVidaEnemigos(),20,7,6,true,1,"Ataque con andador",DatosObjetos.getMecha());
 	public static Enemigo e3 = new Enemigo("Limpiadora",ControllerEnemigo.generarVidaEnemigos(),5,5,9,true,2,"No me pises el fregao",DatosObjetos.getHarina());
 	

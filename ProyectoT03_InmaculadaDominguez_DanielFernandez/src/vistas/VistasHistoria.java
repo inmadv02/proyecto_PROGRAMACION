@@ -156,5 +156,23 @@ public class VistasHistoria {
 		
 		
 	}
+	
+	public static void imprimirAccionEnemigo (int index) {
+		
+		int cero = 0, uno = 1, dos = 2;
+		
+		if(index  == cero) {
+			System.out.println("aaaaa");
+		}
+		
+		if(index  == uno) {
+			System.out.println("bbbbb");
+		}
+		
+		if(index  == dos) {
+			System.out.println("ccccc");
+		}
+	
+	}
 
 }
