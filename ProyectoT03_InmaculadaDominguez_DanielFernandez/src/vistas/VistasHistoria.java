@@ -11,7 +11,7 @@ import datos.DatosTasks;
 
 public class VistasHistoria {
 	
-	public static void imprimirInstrucciones() {
+public static void imprimirInstrucciones() {
 		
 		System.out.println("\t I N S T R U C C I O N E S");
 		System.out.println();
@@ -222,20 +222,21 @@ public class VistasHistoria {
 	
 	}
 	
-	public static void imprimirAccionObjeto(int usar, int uno, int cero, int dos, Objetos [] objetos) {
+	public static void imprimirAccionObjeto (int usar) {//HACER EN CLASE
 		
+		int cero = 0, uno = 1, dos = 2;
+	
 		if(usar-uno == cero) {
-			System.out.println("Le has tirado la mascarilla a la cara del enemigo, haciendo que retroceda\n"
-					+ "y se vaya corriendo, pues cree que lo acabas de infectar con la mascarilla sucia.");
+			System.out.println("Esto te permite tirarle la mascarilla a la cara del enemigo, haciendo que\n"
+					+ "se asuste y te vengas arriba.");
 		}
 		
 		if(usar-uno == uno) {
-			System.out.println("Le has echado el líquido del frufrú al enemigo en los ojos, haciendo que\n"
-					+ "no pueda ver durante un rato.");
+			System.out.println("Esto te permite echarle el líquido del frufrú al enemigo en los ojos, haciendo\nque"
+					+ " no pueda ver durante un rato.");
 		}
 		if(usar-uno == dos) {
-			System.out.println("Con el gel, el enemigo se ha quedado pegado a sí mismo al intentar quitárselo\n"
-					+ "de las manos y ya no puede seguir persiguiéndote.");
+			System.out.println("Con el gel, tus manos serán más pegajosas y tus ataques serán más fuertes.");
 		}
 		
 	}
@@ -301,6 +302,7 @@ public class VistasHistoria {
 				+ "  |____|  \\___|_  /_______  /    /_______  /\\____|__  /_______  /\r\n"
 				+ "                \\/        \\/             \\/         \\/        \\/");
 	}
+	
 	
 	
 	

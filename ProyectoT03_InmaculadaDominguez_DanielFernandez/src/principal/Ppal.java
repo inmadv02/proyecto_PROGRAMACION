@@ -24,7 +24,7 @@ public class Ppal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, vida = 40, fuerza = 30,index = 0, opPelea;
+		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, dos = 2, vida = 40, fuerza = 30,index = 0, opPelea;
 		char nombreJ, a, enter;
 		Personaje p;
 		DatosObjetos datosObjetos = new DatosObjetos();
@@ -174,9 +174,13 @@ public class Ppal {
 								System.out.println();
 								System.out.println("Has usado " + datosObjetos.getObjetos()[usar-uno].getNombre());
 								System.out.println();
+								VistasHistoria.imprimirAccionObjeto(usar);
+								System.out.println();
 								System.out.println(p);
 								System.out.println();
-								System.out.println("--Este objeto no volverá a aparecer en la mochila--");
+								System.out.println();
+								System.out.println("\t \t--Este objeto no volverá a aparecer en la mochila--");
+								System.out.println();
 								
 								
 								break;
