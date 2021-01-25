@@ -24,7 +24,7 @@ public class PpalPrueba {
 	
 		Personaje p;
 		char a;
-		int index = 0, opPelea, usar;
+		int index = 0, opPelea, usar, op;
 		
 		p = new Personaje ('a',20,20,1,1,0);
 		
@@ -32,6 +32,12 @@ public class PpalPrueba {
 		
 		System.out.println();
 		
+		do {
+			
+		ControllerPartida.actualizarPartida(DatosMapa.getMapaNuevo(), DatosEnemigos.getListaEnemigosNueva(), DatosTasks.getTasks(), DatosObjetos.getObjetosNuevos(), p);
+		System.out.println("Número distinto a 0:");
+		op = Leer.datoInt();
+		System.out.println("Movimiento: ");
 		while(ControllerPartida.comprobarGanador(p) && ControllerPersonaje.comprobarVidaJugador(p)) {
 			
 					a= Leer.datoChar();
@@ -96,6 +102,8 @@ public class PpalPrueba {
 		
 			System.out.println("Has ganado");
 		}
+		
+		}while(op!=0);
 
 	}
 

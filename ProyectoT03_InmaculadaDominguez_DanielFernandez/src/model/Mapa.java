@@ -4,14 +4,14 @@ public class Mapa {
 	 
 	private int x;
 	private int y;
-	char [][] mapaPrueba;
+	char [][] mapa;
 	
-	
-	public Mapa(int x, int y, char[][] mapaPrueba) {
+
+	public Mapa(int x, int y, char[][] mapa) {
 		super();
 		this.x = x;
 		this.y = y;
-		this.mapaPrueba = mapaPrueba;
+		this.mapa = mapa;
 	}
 
 
@@ -22,13 +22,13 @@ public class Mapa {
 	}
 
 
-	public char[][] getMapaPrueba() {
-		return mapaPrueba;
+	public char[][] getMapa() {
+		return mapa;
 	}
 
 
-	public void setMapaPrueba(char[][] mapaPrueba) {
-		this.mapaPrueba = mapaPrueba;
+	public void setMapa(char[][] mapa) {
+		this.mapa = mapa;
 	}
 
 

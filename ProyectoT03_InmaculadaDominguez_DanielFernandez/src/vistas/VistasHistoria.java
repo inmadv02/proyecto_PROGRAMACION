@@ -124,22 +124,6 @@ public class VistasHistoria {
 		System.out.println("\t \t \t   |_________________________________|");
 		System.out.println();	
 		System.out.println();
-		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
-				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
-				+ "W, S, A y D \npara MOVERTE.");
-		System.out.println();
-		System.out.println();
-		System.out.println("\t \t \t      ___________________________");
-		System.out.println("\t \t \t     | \t\t\t\t |");
-		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
-		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
-		System.out.println("\t \t \t     |___________________________|");
-		System.out.println();
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
-		System.out.println("\t \t \t \t \t   ·");
 		
 	}
 	
@@ -269,5 +253,27 @@ public class VistasHistoria {
 				+ "  |    | \\    Y    /        \\     |        \\/    |    \\|    `   \\\r\n"
 				+ "  |____|  \\___|_  /_______  /    /_______  /\\____|__  /_______  /\r\n"
 				+ "                \\/        \\/             \\/         \\/        \\/");
+	}
+	
+	public static void imprimirInstrucciones() {
+		
+		
+		System.out.println("Todos los objetos los tendrás que coger de los pasillos del supermercado\n"
+				+ "y se guardarán en tu MOCHILA. Solo necesitarás usar las teclas "
+				+ "W, S, A y D \npara MOVERTE.");
+		System.out.println();
+		System.out.println();
+		System.out.println("\t \t \t      ___________________________");
+		System.out.println("\t \t \t     | \t\t\t\t |");
+		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
+		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
+		System.out.println("\t \t \t     |___________________________|");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("Además debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
+				+ "recivir MÁS DE UN GOLPE ,eso dependerá del daño que hagas y la vida del enemigo.\nBuena suerte.");
+	
+		
 	}
 }

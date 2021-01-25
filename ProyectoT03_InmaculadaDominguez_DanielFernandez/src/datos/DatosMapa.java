@@ -22,7 +22,7 @@ public class DatosMapa {
 					    {'*', ' ', ' ', ' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ','*'},
 					    {'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'}};
 	
-	public static char [][] mapaSinActualizar = {{'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'}, 
+	public static char [][] mapaNuevo = {{'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'}, 
 		    {'*', ' ', ' ', ' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ','*'},
 		    {'*', ' ', ' ', ' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ','*'},
 		    {'*', ' ', ' ', ' ', '|',' ', ' ', '|',' ', ' ','|',' ', ' ',' ','*'},
@@ -49,14 +49,15 @@ public class DatosMapa {
 		DatosMapa.mapa = mapa;
 	}
 
-	public static char[][] getMapaSinActualizar() {
-		return mapaSinActualizar;
+	public static char[][] getMapaNuevo() {
+		return mapaNuevo;
 	}
 
-	public static void setMapaSinActualizar(char[][] mapaSinActualizar) {
-		DatosMapa.mapaSinActualizar = mapaSinActualizar;
+	public static void setMapaNuevo(char[][] mapaNuevo) {
+		DatosMapa.mapaNuevo = mapaNuevo;
 	}
-	
+
+
 	
 
 

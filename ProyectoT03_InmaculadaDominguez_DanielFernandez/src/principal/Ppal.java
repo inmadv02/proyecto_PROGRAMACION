@@ -218,7 +218,7 @@ public class Ppal {
 			break;
 			
 		case 2:
-			System.out.println("En mantenimiento. Volver después.");
+			VistasHistoria.imprimirInstrucciones();
 			
 			break;
 			
