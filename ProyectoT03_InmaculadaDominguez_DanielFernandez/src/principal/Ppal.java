@@ -39,7 +39,8 @@ public class Ppal {
 
 		VistasTitulo.imprimirTitulo();
 		
-		
+		do {
+			
 		System.out.println();	
 		System.out.println("\t \t \t       _________________________");
 		System.out.println("\t \t \t      |\t\t\t\t|");
@@ -144,7 +145,6 @@ public class Ppal {
 									VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 									System.out.println();
 									System.out.println();
-									System.out.println("Te quedan todavía estas tareas: ");
 									System.out.println();
 									CrudTasks.desactivarTasks(DatosTasks.getTasks(), DatosEnemigos.getListaEnemigos());
 									VistasHistoria.imprimirTasks(DatosTasks.getTasks());
@@ -152,6 +152,7 @@ public class Ppal {
 									System.out.println();
 									System.out.println("Vuelve a introducir movimiento: ");
 									System.out.println();
+									VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 								}
 								
 									
@@ -167,7 +168,7 @@ public class Ppal {
 								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 								CrudPersonaje.modificarFuerzayVidaObj(p,DatosObjetos.getObjetos(),usar);
 								System.out.println();
-								System.out.println("Has usado\n \n" + DatosObjetos.getObjetos()[usar-uno].getNombre());
+								System.out.println("Has usado " + DatosObjetos.getObjetos()[usar-uno].getNombre());
 								System.out.println();
 								System.out.println(p);
 								System.out.println();
@@ -233,7 +234,7 @@ public class Ppal {
 		
 		}
 		
-//	}while(op!=0);
+	}while(op!=0);
 		
 		
 

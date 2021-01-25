@@ -272,7 +272,9 @@ public class VistasHistoria {
 		System.out.println();
 		System.out.println();
 		System.out.println("Además debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
-				+ "recivir MÁS DE UN GOLPE ,eso dependerá del daño que hagas y la vida del enemigo.\nBuena suerte.");
+				+ "recivir MÁS DE UN GOLPE ,eso dependerá del daño que hagas y la vida del enemigo.\n"
+				+ "IMPORTANTE: para GANAR la partida deberás conseguir 3 objetos y volver a la caja\n"
+				+ "para pagar,la caja es la posición inicial donde parte el personaje(1,1).\nBuena suerte.");
 	
 		
 	}
