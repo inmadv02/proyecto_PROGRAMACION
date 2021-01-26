@@ -19,6 +19,17 @@ public class Personaje {
 		this.contadorMuertes = contadorMuertes;
 	}
 
+	public Personaje(int vida, int fuerza, int posI, int posJ, int contadorMuertes) {
+		super();
+		this.vida = vida;
+		this.fuerza = fuerza;
+		this.posI = posI;
+		this.posJ = posJ;
+		this.contadorMuertes = contadorMuertes;
+	}
+
+
+
 	public char getNombre() {
 		return nombre;	
 	}
