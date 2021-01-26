@@ -13,10 +13,13 @@ public class VistasHistoria {
 	
 public static void imprimirInstrucciones() {
 		
-		System.out.println("\t I N S T R U C C I O N E S");
+		System.out.println("\n_________________________________________________________________________________________________________");
 		System.out.println();
 		System.out.println();
-		System.out.println("Solo necesitarás usar las teclas W, S, A y D \npara MOVERTE.");
+		System.out.println("\t \t \t      I N S T R U C C I O N E S");
+		System.out.println();
+		System.out.println();
+		System.out.println("\t        Solo necesitarás usar las teclas W, S, A y D para MOVERTE.");
 		System.out.println();
 		System.out.println();
 		System.out.println("\t \t \t      ___________________________");
@@ -24,20 +27,24 @@ public static void imprimirInstrucciones() {
 		System.out.println("\t \t \t     | W: arriba      S: abajo   |");
 		System.out.println("\t \t \t     | A: izquierda   D: derecha |");
 		System.out.println("\t \t \t     |___________________________|");
-		
-		System.out.println("Mientras te mueves por el mapa, encontrarás enemigos por los pasillos.\n"
-				+ "Tendrás que vencer, y a cambio conseguirás los objetos que se te piden\n en la"
-				+ "introducción. Todos los objetos se guardarán en tu MOCHILA y podrás\n usarlos en"
-				+ "las peleas.");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("Además, debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
-				+ "recibir MÁS DE UN GOLPE. Eso dependerá del daño que hagas y la vida del enemigo.\n"
-				+ "IMPORTANTE: para GANAR la partida deberás conseguir los 3 objetos y volver a la caja\n"
-				+ "para pagar. La caja es la posición inicial donde parte el personaje(1,1).\nBuena suerte.");
+		System.out.println("\t   Mientras te mueves por el mapa, encontrarás enemigos por los pasillos.\n"
+				+ "\t   Tendrás que vencer, y a cambio conseguirás los objetos que se te piden\n"
+				+ "\t  en la introducción. Todos los objetos se guardarán en tu MOCHILA y podrás\n"
+				+ "\t \t \t \tusarlos en las peleas.");
+		System.out.println();
 	
-		
+		System.out.println("\tAdemás, debes de saber que debes tener suficiente vida en cada COMBATE como para\n"
+				+ "\trecibir MÁS DE UN GOLPE. Eso dependerá del daño que hagas y la vida del enemigo.\n\n"
+				+ "       IMPORTANTE: para GANAR la partida deberás conseguir los 3 objetos y volver a la caja\n"
+				+ "\t    para pagar. La caja es la posición inicial donde parte el personaje(1,1)");
+		System.out.println("\n\n\t\t\t\t     Buena suerte.");
+		System.out.println();
+		System.out.println();
+		System.out.println("\n_________________________________________________________________________________________________________");
+		System.out.println();
 	}
 	
 	public static void imprimirIntro () {
@@ -176,8 +183,8 @@ public static void imprimirInstrucciones() {
 		
 		if(index  == cero) {
 			System.out.println("Con todo el lío del Coronavirus, ya nadie se detiene unos segundos\n"
-					+ "para que Antonio le pueda hacer publicidad de la pescadería. Sin embargo,\neso no"
-					+ " hace que se rinda. Por ello, cuando te ha visto, no ha dudado \nen correr "
+					+ "para que Antonio le pueda hacer publicidad de la pescadería Mercadona.\nSin embargo,eso no"
+					+ " hace que se rinda. Por ello, cuando te ha visto, no ha \ndudado en correr "
 					+ "hacia ti.");
 		}
 		
