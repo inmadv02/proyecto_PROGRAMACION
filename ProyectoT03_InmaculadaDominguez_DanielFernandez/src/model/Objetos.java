@@ -27,8 +27,17 @@ public class Objetos {
 		this.posI = posI;
 		this.posJ = posJ;
 	}
-	
 
+	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo, int posI, int posJ, String efecto) {
+		super();
+		this.nombre = nombre;
+		this.bonusVida = bonusVida;
+		this.bonusFuerza = bonusFuerza;
+		this.activo = activo;
+		this.posI = posI;
+		this.posJ = posJ;
+		this.efecto = efecto;
+	}
 
 	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo, String efecto) {
 		super();

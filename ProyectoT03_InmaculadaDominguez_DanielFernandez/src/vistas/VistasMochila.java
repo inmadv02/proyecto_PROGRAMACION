@@ -43,10 +43,10 @@ public class VistasMochila {
 			
 			if (objetos[i].isActivo() == true) {
 				
-				contador++;
+				//contador++;
 				
 			
-			System.out.println("\t \t|| ["+ contador +"] " + objetos[i].getNombre()+ "\t  \t " 
+			System.out.println("\t \t|| ["+ i +"] " + objetos[i].getNombre()+ "\t  \t " 
 			+ objetos[i].getBonusVida() + "\t \t   " + objetos[i].getBonusFuerza() + " \t    ||");
 			
 			}
@@ -55,5 +55,25 @@ public class VistasMochila {
 		System.out.println("\t \t||\t \t \t  \t    \t    \t   \t    ||");
 		System.out.println("\t \t ============================================================");
 	
+	}
+	
+	public static void imprimirObjetoUsado(Objetos[]listaObjetos, int usar) {
+		
+		while(listaObjetos[usar].isActivo() == false) {
+			usar++;
+		}
+		
+		System.out.println("Has usado " + DatosObjetos.getObjetos()[usar].getNombre());
+		
+	}
+	
+	public static void imprimirAccionObjeto(Objetos[]listaObjetos, int usar) {
+		
+		while(listaObjetos[usar].isActivo() == false) {
+			usar++;
+		}
+		
+		System.out.println(DatosObjetos.getObjetos()[usar].getEfecto());
+		
 	}
 }

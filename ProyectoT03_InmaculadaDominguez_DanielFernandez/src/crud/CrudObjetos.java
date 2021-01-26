@@ -13,7 +13,7 @@ public class CrudObjetos {
 		int posicion;
 		posicion = usar - 1;
 		
-		objetos[posicion].setActivo(false);
+		objetos[usar].setActivo(false);
 		
 	}
 	

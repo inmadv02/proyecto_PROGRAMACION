@@ -3,6 +3,7 @@ package principal;
 import vistas.VistasHistoria;
 import vistas.VistasMapa;
 import vistas.VistasTitulo;
+import controller.ControllerMochila;
 import controller.ControllerPartida;
 import controller.ControllerPersonaje;
 import crud.CrudMochila;
@@ -24,10 +25,25 @@ public class Ppal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, dos = 2, vida = 40, fuerza = 30,index = 0, opPelea;
+		/*
+		 * El trabajo ha sido realizado por Inmaculada Domínguez y Daniel Fernández.
+		 * 
+		 * Nos hemos repartido el trabajo de la siguiente forma:
+		 * 
+		 * Ambos: Main,DatosEnemigos,DatosMapa,DatosObjetos,Model
+		 * Inma:ControllerObjeto,CrudEnemigo,CrudObjetos,CrudTasks,CrudMochila,DatosTasks,VistaHistoria,VistaMochila,VistaTitulo
+		 * Dani:ControllerEnemigo,ControllerPartida,ControllerPersonaje,ControllerMochila,CrudPersonaje,VistaMapa
+		 * 
+		 * 
+		 *   
+		 * 
+		 * 
+		 * */
+		
+		
+		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, dos = 2, vida = 50, fuerza = 20,index = 0, opPelea;
 		char nombreJ, a, enter;
 		Personaje p;
-		DatosEnemigos DatosEnemigos = new DatosEnemigos();
 		
 		
 
@@ -153,23 +169,33 @@ public class Ppal {
 								break;
 									
 							case 2:
+								
+								
+								if(ControllerMochila.comprobarMochilaVacia(DatosObjetos.getObjetos())) {
+
+								
+									System.out.println("Elige el objeto que quieras.");
+									VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+									usar = Leer.datoInt();
+									VistasMochila.imprimirObjetoUsado(DatosObjetos.getObjetos(), usar);
+									VistasMochila.imprimirAccionObjeto(DatosObjetos.getObjetos(), usar);
+									System.out.println();
+									System.out.println();
+									CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
+									VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+									CrudPersonaje.modificarFuerzayVidaObj(p,DatosObjetos.getObjetos(),usar);
+									System.out.println();
+									System.out.println(p);
+									System.out.println();
+									System.out.println();
+									System.out.println("\t \t--Este objeto no volverá a aparecer en la mochila--");
+									System.out.println();
 									
-								System.out.println("Elige el objeto que quieras.");
-								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
-								usar = Leer.datoInt();
-								CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
-								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
-								CrudPersonaje.modificarFuerzayVidaObj(p,DatosObjetos.getObjetos(),usar);
-								System.out.println();
-								System.out.println("Has usado " + DatosObjetos.getObjetos()[usar-uno].getNombre());
-								System.out.println();
-								DatosObjetos.getObjetos()[usar-uno].getEfecto();
-								System.out.println();
-								System.out.println(p);
-								System.out.println();
-								System.out.println();
-								System.out.println("\t \t--Este objeto no volverá a aparecer en la mochila--");
-								System.out.println();
+								
+								}else {
+									
+									System.out.println("No te quedan más objetos de momento");
+								}
 								
 								
 								break;
