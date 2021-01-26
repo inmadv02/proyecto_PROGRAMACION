@@ -59,7 +59,10 @@ public class ControllerPartida {
 		}
 		
 		p.setContadorMuertes(cero);
-		
+		p.setPosI(1);
+		p.setPosJ(1);
+		p.setVida(50);
+		p.setFuerza(20);
 		
 		
 	}

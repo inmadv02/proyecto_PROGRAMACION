@@ -83,34 +83,34 @@ public String toString() {
 		int diez = 10, cero = 0;
 		
 		if(vida < diez && vida > cero) {
-			return"\t \t \t       _________________________\r\n"
-					+ "\t \t \t      |\t\t\t\t|\r\n"
-					+ "\t \t \t      |       TU PERSONAJE \t|\r\n"
-					+ "\t \t \t      |\t\t\t\t|\r\n"
-					+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
-					+ "\t \t \t      | Vida: 0" + vida + "\t\t|\r\n"
-					+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
-					+ "\t \t \t      |_________________________|";
+			return"\t \t \t \t       _________________________\r\n"
+					+ "\t \t \t \t      |\t\t\t\t|\r\n"
+					+ "\t \t \t \t      |       TU PERSONAJE   \t|\r\n"
+					+ "\t \t \t \t      |\t\t\t\t|\r\n"
+					+ "\t \t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
+					+ "\t \t \t \t      | Vida: 0" + vida + "\t\t|\r\n"
+					+ "\t \t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
+					+ "\t \t \t \t      |_________________________|";
 		}
 			
 		if(vida <= cero) {
-			return "\t \t \t       _________________________\r\n"
-					+ "\t \t \t      |\t\t\t\t|\r\n"
-					+ "\t \t \t      |       TU PERSONAJE \t|\r\n"
-					+ "\t \t \t      |\t\t\t\t|\r\n"
-					+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
-					+ "\t \t \t      | Vida: " + cero + "\t\t        |\r\n"
-					+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
-					+ "\t \t \t      |_________________________|";
+			return "\t \t \t \t         _________________________\r\n"
+					+ "\t \t \t \t       |\t\t\t |\r\n"
+					+ "\t \t \t \t       |       TU PERSONAJE   \t |\r\n"
+					+ "\t \t \t \t       |\t\t\t |\r\n"
+					+ "\t \t \t \t       | Nombre: " + nombre + "\t \t |\r\n"
+					+ "\t \t \t \t       | Vida: " + cero + "\t\t         |\r\n"
+					+ "\t \t \t \t       | Fuerza: " + fuerza + "\t \t |\r\n"
+					+ "\t \t \t \t       |_________________________|";
 			
-		}else   return "\t \t \t       _________________________\r\n"
-						+ "\t \t \t      |\t\t\t\t|\r\n"
-						+ "\t \t \t      |       TU PERSONAJE \t|\r\n"
-						+ "\t \t \t      |\t\t\t\t|\r\n"
-						+ "\t \t \t      | Nombre: " + nombre + "\t \t|\r\n"
-						+ "\t \t \t      | Vida: " + vida + "\t\t|\r\n"
-						+ "\t \t \t      | Fuerza: " + fuerza + "\t \t|\r\n"
-						+ "\t \t \t      |_________________________|";
+		}else   return "\t \t \t \t        _________________________\r\n"
+						+ "\t \t \t \t       |\t\t\t |\r\n"
+						+ "\t \t \t \t       |       TU PERSONAJE   \t |\r\n"
+						+ "\t \t \t \t       |\t\t\t |\r\n"
+						+ "\t \t \t \t       | Nombre: " + nombre + "\t \t |\r\n"
+						+ "\t \t \t \t       | Vida: " + vida + "\t\t |\r\n"
+						+ "\t \t \t \t       | Fuerza: " + fuerza + "\t \t |\r\n"
+						+ "\t \t \t \t       |_________________________|";
 	}
 	
 	

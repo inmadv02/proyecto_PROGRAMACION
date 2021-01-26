@@ -51,16 +51,24 @@ public static void imprimirInstrucciones() {
 		
 		System.out.println("\n_________________________________________________________________________________________________________");
 		
-		System.out.println("\n \nBienvenido al año 2020, un año donde la humanidad se ha visto\n"
-				+ "amenazada por un virus nuevo y desconocido: el Coronavirus.");
-		System.out.println("Este patógeno no solo afecta a la salud de las personas, sino que\n"
-				+ "con el paso de los días, la persona contagiada pierde la razón y se vuelve \ntotalmente"
+		System.out.println();
+		System.out.println("\t    Bienvenido al año 2020, un año donde la humanidad se ha visto\n"
+				+ "\t    amenazada por un virus nuevo y desconocido: el Coronavirus.");
+		System.out.println();
+		System.out.println();
+		System.out.println("\t   Este patógeno no solo afecta a la salud de las personas, sino que\n"
+				+ "\tcon el paso de los días, la persona contagiada pierde la razón y se vuelve \n\t        totalmente"
 				+ " agresiva contra cualquier ser viviente.");
-		System.out.println("\nComo consecuencia, los humanos se encuentran en una situación prácticamente"
-				+ " \napocalíptica, en la que viven en constante miedo, ya que su día a día se ha \nconvertido en una"
+		System.out.println();
+		System.out.println();
+		System.out.println("\n\t Como consecuencia, los humanos se encuentran en una situación prácticamente"
+				+ " \n\t apocalíptica, en la que viven en constante miedo, ya que su día a día se ha \n\t\t convertido en una"
 				+ "continua lucha por la supervivencia. ");
-		System.out.println("\nCualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\nde la población, así que, "
+		System.out.println();
+		System.out.println();
+		System.out.println("\n\t   Cualquier objeto o pertenencia adicional proporciona ventaja sobre el resto\n\tde la población, así que, "
 				+ "por qué no sales afuera para ver qué más puedes conseguir?");
+		System.out.println();
 		System.out.println();
 	
 		

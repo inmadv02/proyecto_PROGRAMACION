@@ -44,12 +44,15 @@ public class Ppal {
 		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, dos = 2, vida = 50, fuerza = 20,index = 0, opPelea;
 		char nombreJ, a, enter;
 		Personaje p;
+		p = new Personaje (vida, fuerza, uno, uno, cero);
 		
 		
 
 		VistasTitulo.imprimirTitulo();
 		
 		do {
+			
+		ControllerPartida.actualizarPartida(DatosMapa.getMapa(), DatosMapa.getMapaNuevo(), DatosEnemigos.getListaEnemigos(), DatosEnemigos.getListaEnemigosNueva(), DatosTasks.getTasks(), DatosObjetos.getObjetos(), DatosObjetos.getObjetosNuevos(), p);
 			
 		System.out.println();	
 		System.out.println("\t \t \t       _________________________");
@@ -67,11 +70,10 @@ public class Ppal {
 			
 			VistasHistoria.imprimirIntro();
 			
-			System.out.println("Di tu nombre. Debe contener solo una letra");
+			System.out.println("\t \t      Di tu nombre. Debe contener solo una letra");
 			nombreJ = Leer.datoChar();
 
-			
-			p = new Personaje (nombreJ, vida, fuerza, uno, uno, cero);
+			p.setNombre(nombreJ);
 				
 				VistasHistoria.imprimirPantallaCarga();
 				System.out.println("Pulse enter para continuar.");
