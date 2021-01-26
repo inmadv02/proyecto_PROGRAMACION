@@ -17,5 +17,7 @@ public class CrudObjetos {
 		
 	}
 	
+	//tendría que poner un método de usar para conseguir la posición
+	//real del objeto
 
 }

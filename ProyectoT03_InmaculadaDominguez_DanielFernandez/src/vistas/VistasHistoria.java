@@ -229,26 +229,9 @@ public static void imprimirInstrucciones() {
 	
 	}
 	
-	public static void imprimirAccionObjeto (int usar) {//HACER EN CLASE
-		
-		int cero = 0, uno = 1, dos = 2;
-	
-		if(usar-uno == cero) {
-			System.out.println("Esto te permite tirarle la mascarilla a la cara del enemigo, haciendo que\n"
-					+ "se asuste y te vengas arriba.");
-		}
-		
-		if(usar-uno == uno) {
-			System.out.println("Esto te permite echarle el líquido del frufrú al enemigo en los ojos, haciendo\nque"
-					+ " no pueda ver durante un rato.");
-		}
-		if(usar-uno == dos) {
-			System.out.println("Con el gel, tus manos serán más pegajosas y tus ataques serán más fuertes.");
-		}
-		
-	}
 	
 	public static void imprimirDerrota () {
+		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("  ________                        ________                     \r\n"
@@ -261,6 +244,8 @@ public static void imprimirInstrucciones() {
 	
 	public static void imprimirFinalAlternativo () {
 		
+		System.out.println();
+		System.out.println();
 		System.out.println("Ya has conseguido los tres objetos que necesitabas y ya has pagado rápidamente\n"
 				+ "en caja, así que decides irte.");
 		System.out.println();
@@ -286,6 +271,7 @@ public static void imprimirInstrucciones() {
 		System.out.println();
 		System.out.println("Una vez que te ha mordido, consigues deshacerte del hombre, pero ya es demasiado\n"
 				+ "tarde porque te ha infectado.");
+		System.out.println();
 		
 	}
 	
@@ -297,11 +283,22 @@ public static void imprimirInstrucciones() {
 		System.out.println();
 		System.out.println("No obstante, sabes que te debes seguir manteniendo alerta, porque aún te queda\n"
 				+ "sobrevivir al 2020");
+		System.out.println();
 		
 	}
 	
 	public static void imprimirFin () {
 		
+		System.out.println();
+		System.out.println();
+		System.out.println("\t \t \t   ·");
+		System.out.println("\t \t \t   ·");
+		System.out.println("\t \t \t   ·");
+		System.out.println("\t \t \t   ·");
+		System.out.println("\t \t \t   ·");
+		System.out.println("\t \t \t   ·");
+		System.out.println();
+		System.out.println();
 		System.out.println("______________ ______________    ___________ _______  ________   \r\n"
 				+ "\\__    ___/   |   \\_   _____/    \\_   _____/ \\      \\ \\______ \\  \r\n"
 				+ "  |    | /    ~    \\    __)_      |    __)_  /   |   \\ |    |  \\ \r\n"

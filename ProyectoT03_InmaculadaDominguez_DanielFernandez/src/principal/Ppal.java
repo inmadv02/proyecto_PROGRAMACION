@@ -27,22 +27,11 @@ public class Ppal {
 		int op, op2, cero = 0, usar, contadorPelea = 0, uno = 1, dos = 2, vida = 40, fuerza = 30,index = 0, opPelea;
 		char nombreJ, a, enter;
 		Personaje p;
-		DatosObjetos datosObjetos = new DatosObjetos();
-		DatosTasks datosTareas = new DatosTasks();
-		DatosEnemigos datosEnemigos = new DatosEnemigos();
-		DatosMapa datosMapa = new DatosMapa();
-		VistasHistoria vistaHitoria = new VistasHistoria();
-		VistasTitulo vistaTitulo = new VistasTitulo();
-		VistasMapa vistaMapa = new VistasMapa();
-		VistasMochila vistaMochila = new VistasMochila();
-		ControllerPartida conPartida = new ControllerPartida();
-		ControllerPersonaje conPersonaje = new ControllerPersonaje();
-		CrudMochila crudMochila = new CrudMochila ();
-		CrudTasks crudTareas = new CrudTasks ();
-		CrudPersonaje crudPersonaje = new CrudPersonaje();
-		CrudObjetos crudObjeto = new CrudObjetos();
+		DatosEnemigos DatosEnemigos = new DatosEnemigos();
+		
+		
 
-		vistaTitulo.imprimirTitulo();
+		VistasTitulo.imprimirTitulo();
 		
 		do {
 			
@@ -60,7 +49,7 @@ public class Ppal {
 		
 		case 1:
 			
-			vistaHitoria.imprimirIntro();
+			VistasHistoria.imprimirIntro();
 			
 			System.out.println("Di tu nombre. Debe contener solo una letra");
 			nombreJ = Leer.datoChar();
@@ -68,10 +57,10 @@ public class Ppal {
 			
 			p = new Personaje (nombreJ, vida, fuerza, uno, uno, cero);
 				
-				vistaHitoria.imprimirPantallaCarga();
+				VistasHistoria.imprimirPantallaCarga();
 				System.out.println("Pulse enter para continuar.");
 				enter = Leer.datoChar();
-				vistaHitoria.imprimirMisionInicio(datosObjetos.objetos);
+				VistasHistoria.imprimirMisionInicio(DatosObjetos.objetos);
 				System.out.println("Pulse enter para continuar.");
 				enter = Leer.datoChar();
 				System.out.println();
@@ -83,33 +72,33 @@ public class Ppal {
 						+ "persona infectada.");
 				System.out.println("Por eso, te hemos facilitado las tareas que debes completar:");
 				System.out.println();
-				vistaHitoria.imprimirTasks(datosTareas.getTasks());
+				VistasHistoria.imprimirTasks(DatosTasks.getTasks());
 				System.out.println();
 				System.out.println("Que la fuerza te acompañe.");
 				System.out.println();
 				System.out.println();
 				System.out.println();
-				vistaMapa.imprimirMapa(datosMapa.getMapa(),p);
+				VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 				System.out.println();
 				System.out.println("Introduce algún movimiento:");
 				
 				
-				while(conPartida.comprobarGanador(p) && conPersonaje.comprobarVidaJugador(p)) {
+				while(ControllerPartida.comprobarGanador(p) && ControllerPersonaje.comprobarVidaJugador(p)) {
 					
 					a= Leer.datoChar();
-					vistaMapa.moverJugador(p, a);
-					vistaMapa.imprimirMapa(DatosMapa.getMapa(),p);
+					VistasMapa.moverJugador(p, a);
+					VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 				
-					if(conPersonaje.comprobarPosicion(p, datosEnemigos.getListaEnemigos())) {
+					if(ControllerPersonaje.comprobarPosicion(p, DatosEnemigos.getListaEnemigos())) {
 					
-						index = conPersonaje.posicionEnemigos(p);
+						index = ControllerPersonaje.posicionEnemigos(p);
 						System.out.println();
 						System.out.println();
-						System.out.println("Al entrar en el pasillo, te has encontrado con "+datosEnemigos.getListaEnemigos()[index].getNombre() +  ".");
-						System.out.println(datosEnemigos.getListaEnemigos()[index]);
+						System.out.println("Al entrar en el pasillo, te has encontrado con "+DatosEnemigos.getListaEnemigos()[index].getNombre() +  ".");
+						System.out.println(DatosEnemigos.getListaEnemigos()[index]);
 						System.out.println();
 						System.out.println();
-						vistaHitoria.imprimirAccionEnemigo(index);
+						VistasHistoria.imprimirAccionEnemigo(index);
 						System.out.println();
 						
 					do {
@@ -125,39 +114,39 @@ public class Ppal {
 							
 							case 1:
 									
-								System.out.println("Parece que ha usado el ataque "+ datosEnemigos.getListaEnemigos()[index].getAtaque());
+								System.out.println("Parece que ha usado el ataque "+ DatosEnemigos.getListaEnemigos()[index].getAtaque());
 								
-								while(datosEnemigos.getListaEnemigos()[index].getVida() >= cero) {
+								while(DatosEnemigos.getListaEnemigos()[index].getVida() >= cero) {
 									
-									conPersonaje.pelear(p,datosEnemigos.getListaEnemigos(),index);
+									ControllerPersonaje.pelear(p,DatosEnemigos.getListaEnemigos(),index);
 									contadorPelea++;
 									
 								}
 								
-								System.out.println("Te ha quitado "+datosEnemigos.getListaEnemigos()[index].getFuerza() * contadorPelea+ " de vida.");
+								System.out.println("Te ha quitado "+DatosEnemigos.getListaEnemigos()[index].getFuerza() * contadorPelea+ " de vida.");
 								contadorPelea = cero;
 								
-								if (conPersonaje.comprobarVidaJugador(p)) {
+								if (ControllerPersonaje.comprobarVidaJugador(p)) {
 									
 									System.out.println();
-									vistaHitoria.imprimirAccionPersonaje(index);
-									conPersonaje.sumarContadorMuertes(p);
+									VistasHistoria.imprimirAccionPersonaje(index);
+									ControllerPersonaje.sumarContadorMuertes(p);
 									System.out.println();
 									System.out.println(p);
 									System.out.println();
-									System.out.println("Has ganado la pelea y has conseguido: \n \n"+ datosEnemigos.getListaEnemigos()[index].getObjeto());
-									crudMochila.ganarObjeto(datosEnemigos.getListaEnemigos(), datosObjetos.getObjetos());
-									vistaMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+									System.out.println("Has ganado la pelea y has conseguido: \n \n"+ DatosEnemigos.getListaEnemigos()[index].getObjeto());
+									CrudMochila.ganarObjeto(DatosEnemigos.getListaEnemigos(), DatosObjetos.getObjetos());
+									VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 									System.out.println();
 									System.out.println();
 									System.out.println();
-									crudTareas.desactivarTasks(datosTareas.getTasks(), datosEnemigos.getListaEnemigos());
-									vistaHitoria.imprimirTasks(datosTareas.getTasks());
+									CrudTasks.desactivarTasks(DatosTasks.getTasks(), DatosEnemigos.getListaEnemigos());
+									VistasHistoria.imprimirTasks(DatosTasks.getTasks());
 									System.out.println();
 									System.out.println();
 									System.out.println("Vuelve a introducir movimiento: ");
 									System.out.println();
-									vistaMapa.imprimirMapa(DatosMapa.getMapa(),p);
+									VistasMapa.imprimirMapa(DatosMapa.getMapa(),p);
 								}
 								
 									
@@ -166,15 +155,15 @@ public class Ppal {
 							case 2:
 									
 								System.out.println("Elige el objeto que quieras.");
-								vistaMochila.imprimirMochilaUpdate(datosObjetos.getObjetos());
+								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
 								usar = Leer.datoInt();
-								crudObjeto.borrarObjeto(usar, datosObjetos.getObjetos());
-								vistaMochila.imprimirMochilaUpdate(datosObjetos.getObjetos());
-								crudPersonaje.modificarFuerzayVidaObj(p,datosObjetos.getObjetos(),usar);
+								CrudObjetos.borrarObjeto(usar, DatosObjetos.getObjetos());
+								VistasMochila.imprimirMochilaUpdate(DatosObjetos.getObjetos());
+								CrudPersonaje.modificarFuerzayVidaObj(p,DatosObjetos.getObjetos(),usar);
 								System.out.println();
-								System.out.println("Has usado " + datosObjetos.getObjetos()[usar-uno].getNombre());
+								System.out.println("Has usado " + DatosObjetos.getObjetos()[usar-uno].getNombre());
 								System.out.println();
-								VistasHistoria.imprimirAccionObjeto(usar);
+								DatosObjetos.getObjetos()[usar-uno].getEfecto();
 								System.out.println();
 								System.out.println(p);
 								System.out.println();
@@ -195,25 +184,25 @@ public class Ppal {
 				}
 			}
 				
-			if(conPartida.comprobarGanador(p)) {
+			if(ControllerPartida.comprobarGanador(p)) {
 				
-				vistaHitoria.imprimirDerrota();
+				VistasHistoria.imprimirDerrota();
 				
 			}else {
 			
-				vistaHitoria.imprimirFinalAlternativo();
+				VistasHistoria.imprimirFinalAlternativo();
 				op2 = Leer.datoInt();
 				
 				switch(op2) {
 				
 					case 1:
-						vistaHitoria.imprimirFinalAlternativo1();
-						vistaHitoria.imprimirFin();
+						VistasHistoria.imprimirFinalAlternativo1();
+						VistasHistoria.imprimirFin();
 						break;
 						
 					case 2:
-						vistaHitoria.imprimirFinalAlternativo2();
-						vistaHitoria.imprimirFin();
+						VistasHistoria.imprimirFinalAlternativo2();
+						VistasHistoria.imprimirFin();
 						break;
 						
 					default:
@@ -227,7 +216,7 @@ public class Ppal {
 			break;
 			
 		case 2:
-			vistaHitoria.imprimirInstrucciones();
+			VistasHistoria.imprimirInstrucciones();
 			
 			break;
 			

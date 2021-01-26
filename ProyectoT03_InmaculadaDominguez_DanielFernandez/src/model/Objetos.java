@@ -8,6 +8,7 @@ public class Objetos {
 	private boolean activo;
 	private int posI;
 	private int posJ;
+	private String efecto;
 	
 	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo) {
 		super();
@@ -26,6 +27,17 @@ public class Objetos {
 		this.posI = posI;
 		this.posJ = posJ;
 	}
+	
+
+
+	public Objetos(String nombre, int bonusVida, int bonusFuerza, boolean activo, String efecto) {
+		super();
+		this.nombre = nombre;
+		this.bonusVida = bonusVida;
+		this.bonusFuerza = bonusFuerza;
+		this.activo = activo;
+		this.efecto = efecto;
+	}
 
 	public Objetos(int bonusVida, int bonusFuerza) {
 		super();
@@ -33,8 +45,30 @@ public class Objetos {
 		this.bonusFuerza = bonusFuerza;
 	}
 	
-	
+	public int getPosI() {
+		return posI;
+	}
 
+	public void setPosI(int posI) {
+		this.posI = posI;
+	}
+
+	public int getPosJ() {
+		return posJ;
+	}
+
+	public void setPosJ(int posJ) {
+		this.posJ = posJ;
+	}
+
+	public String getEfecto() {
+		return efecto;
+	}
+
+	public void setEfecto(String efecto) {
+		this.efecto = efecto;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}

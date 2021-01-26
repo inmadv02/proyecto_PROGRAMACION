@@ -5,9 +5,12 @@ import controller.ControllerObjeto;
 
 public class DatosObjetos {
 	
-	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
-	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
-	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true);
+	public static Objetos mascarilla = new Objetos ("Mascarilla sucia", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true,
+			                           "Esto te permite tirarle la mascarilla a la cara del enemigo, haciendo que\n\r\nse asuste y te vengas arriba.");
+	public static Objetos pulverizador = new Objetos ("Frufrú desinfec.", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true,
+			                           "Esto te permite echarle el líquido del frufrú al enemigo en los ojos, haciendo\nque no pueda ver durante un rato.");
+	public static Objetos gel = new Objetos ("Gel pegajoso", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), true, "Con el gel, "
+			                           + " tus manos serán más pegajosas y tus ataques serán más fuertes.");
 	public static Objetos papel = new Objetos ("Papel higiénico", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 3, 3);
 	public static Objetos mecha = new Objetos ("Carne La Mechá", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 7, 6);
 	public static Objetos harina = new Objetos ("Harina   ", ControllerObjeto.GenerarBonusVida(), ControllerObjeto.GenerarBonusFuerza(), false, 5, 9);
